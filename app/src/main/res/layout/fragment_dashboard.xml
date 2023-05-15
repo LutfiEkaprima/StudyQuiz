@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE RelativeLayout [<!ELEMENT RelativeLayout (ImageView)*><!ATTLIST RelativeLayoutxmlns:android CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:background CDATA #REQUIREDtools:context CDATA #REQUIRED><!ELEMENT ImageView (#PCDATA)><!ATTLIST ImageViewandroid:background CDATA #REQUIREDandroid:id CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_marginStart CDATA #REQUIREDandroid:layout_marginTop CDATA #REQUIREDandroid:layout_width CDATA #REQUIRED>]>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboardlobby"
+    tools:context=".Dashboard">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/quiz"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/quiz">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/ujian"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="380dp"
+        android:background="@drawable/ujian">
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/nilai"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="510dp"
+        android:background="@drawable/nilai">
+    </ImageView>
+
+
+
+</RelativeLayout>
