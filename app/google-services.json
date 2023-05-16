@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "945082950218",
+    "project_id": "studyquiz-e4a04",
+    "storage_bucket": "studyquiz-e4a04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945082950218:android:32d86dde10ef28cb5afcb3",
+        "android_client_info": {
+          "package_name": "com.example.studyquizz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945082950218-dc6ee5jfd035c2sufhid28791nkpl07o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB56hXHM4pdkXVbxg6d5dX8aNDKpLxT5TQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945082950218-dc6ee5jfd035c2sufhid28791nkpl07o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
