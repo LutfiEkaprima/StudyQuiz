@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><!DOCTYPE RelativeLayout [<!ELEMENT RelativeLayout (ImageView)*><!ATTLIST RelativeLayoutxmlns:android CDATA #REQUIREDxmlns:tools CDATA #REQUIREDandroid:layout_width CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:background CDATA #REQUIREDtools:context CDATA #REQUIRED><!ELEMENT ImageView (#PCDATA)><!ATTLIST ImageViewandroid:background CDATA #REQUIREDandroid:id CDATA #REQUIREDandroid:layout_height CDATA #REQUIREDandroid:layout_marginStart CDATA #REQUIREDandroid:layout_marginTop CDATA #REQUIREDandroid:layout_width CDATA #REQUIRED>]>
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

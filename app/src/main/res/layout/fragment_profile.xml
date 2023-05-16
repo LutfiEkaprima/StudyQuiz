@@ -3,13 +3,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="@color/white"
     tools:context=".Profile">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gendercwok"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginBottom="350dp">
+    </ImageView>
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DAFFA NUR FAKHRI"
+        android:textSize="35sp"
+        android:fontFamily="@font/podkova_semibold"
+        android:textColor="@color/black"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="140dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SMAN 1 GUNUNG SINDUR"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/black"
+        android:layout_marginStart="70sp"
+        android:layout_marginTop="190dp">
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/garis"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="330dp">
+
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="KELAS"
+        android:textSize="23sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/black"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="260dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X.1"
+        android:textSize="23sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/black"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="295dp">
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/garis"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="430dp">
+
+    </ImageView>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="JENIS KELAMIN"
+        android:textSize="23sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/black"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="360dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Laki - Laki"
+        android:textSize="23sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/black"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="395dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOMOR HANDPHONE"
+        android:textSize="23sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/black"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="460dp">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="082113472156"
+        android:textSize="23sp"
+        android:fontFamily="@font/poppinsmedium"
+        android:textColor="@color/black"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="495dp">
+    </TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/garis"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="530dp">
+
+    </ImageView>
+
 
 </FrameLayout>
