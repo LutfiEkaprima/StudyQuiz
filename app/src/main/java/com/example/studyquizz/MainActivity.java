@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 if (usernamefl.getText().toString().equalsIgnoreCase(username)&& passwordfl.getText().toString().equalsIgnoreCase(password)){
                     startActivity(new Intent(MainActivity.this, Menu.class));
                     logbt.setBackgroundColor(Color.BLUE);
-                    Toast.makeText(MainActivity.this, "Login Berhasil", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Selamat Datang " + (username), Toast.LENGTH_SHORT).show();
                 }else{
                     logbt.setBackgroundColor(Color.RED);
                     Toast.makeText(MainActivity.this, "Username atau Password Salah", Toast.LENGTH_SHORT).show();
