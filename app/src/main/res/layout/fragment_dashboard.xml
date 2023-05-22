@@ -6,7 +6,6 @@
     android:background="@drawable/dashboardlobby"
     tools:context=".Dashboard">
 
-    <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/quiz"
         android:layout_width="377dp"
