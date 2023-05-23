@@ -3,17 +3,23 @@ package com.example.studyquizz;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class Dashboard extends Fragment {
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
+
+    long exittime = 0;
 
 
     @Override
@@ -61,4 +67,27 @@ public class Dashboard extends Fragment {
 
         return view;
     }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        // ...
+
+        // Mengatur listener untuk tombol back
+        requireActivity().getOnBackPressedDispatcher().addCallback(getViewLifecycleOwner(), new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                // Kode yang akan dijalankan saat tombol back ditekan
+
+                if ((System.currentTimeMillis() - exittime) > 2000) {
+                    Toast.makeText(requireContext(), "Tekan lagi untuk keluar", Toast.LENGTH_SHORT).show();
+                    exittime = System.currentTimeMillis();
+                } else {
+                    requireActivity().finishAffinity();
+                }
+            }
+        });
+    }
+
 }
