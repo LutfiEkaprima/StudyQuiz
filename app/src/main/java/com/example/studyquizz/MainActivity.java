@@ -10,15 +10,24 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
-    String username = "admin";
-    String password = "1234";
+    long exittime = 0;
+    Map<String, String> userMap = new HashMap<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        userMap.put("lutfi", "1234");
+        userMap.put("fahreza", "1234");
+        userMap.put("ridhuan", "1234");
+        userMap.put("jonathan", "1234");
+        userMap.put("dafa", "1234");
 
         EditText usernamefl = findViewById(R.id.usernamefl);
         EditText passwordfl = findViewById(R.id.passwordfl);
@@ -27,17 +36,29 @@ public class MainActivity extends AppCompatActivity {
         logbt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (usernamefl.getText().toString().equalsIgnoreCase(username)&& passwordfl.getText().toString().equalsIgnoreCase(password)){
+                String enteredUsername = usernamefl.getText().toString();
+                String enteredPassword = passwordfl.getText().toString();
+                String capitalizedUsername = enteredUsername.substring(0, 1).toUpperCase() + enteredUsername.substring(1);
+
+                if (userMap.containsKey(enteredUsername) && userMap.get(enteredUsername).equals(enteredPassword)) {
                     startActivity(new Intent(MainActivity.this, Menu.class));
                     logbt.setBackgroundColor(Color.BLUE);
-                    Toast.makeText(MainActivity.this, "Selamat Datang " + (username), Toast.LENGTH_SHORT).show();
-                }else{
+                    Toast.makeText(MainActivity.this, "Selamat Datang " + capitalizedUsername, Toast.LENGTH_SHORT).show();                } else {
                     logbt.setBackgroundColor(Color.RED);
                     Toast.makeText(MainActivity.this, "Username atau Password Salah", Toast.LENGTH_SHORT).show();
-
                 }
-
             }
         });
+    }
+
+
+    @Override
+    public void onBackPressed() {
+        if ((System.currentTimeMillis() - exittime) > 2000) {
+            Toast.makeText(this, "Tekan lagi untuk keluar", Toast.LENGTH_SHORT).show();
+            exittime = System.currentTimeMillis();
+        } else {
+            finishAffinity();
+        }
     }
 }
