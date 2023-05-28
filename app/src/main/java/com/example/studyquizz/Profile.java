@@ -43,7 +43,7 @@ public class Profile extends Fragment {
     }
 
     private void logout() {
-        Intent intent = new Intent(getActivity(), Profile.class);
+        Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
         getActivity().finish();
     }

@@ -17,6 +17,7 @@
     </ImageView>
 
     <TextView
+        android:id="@+id/namasiswa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="DAFFA NUR FAKHRI"
@@ -113,6 +114,7 @@
     </TextView>
 
     <TextView
+        android:id="@+id/nohp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="082113472156"

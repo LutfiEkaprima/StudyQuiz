@@ -23,10 +23,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        userMap.put("lutfi", "1234");
-        userMap.put("fahreza", "1234");
-        userMap.put("ridhuan", "1234");
-        userMap.put("jonathan", "1234");
+        userMap.put("admin", "1234");
         userMap.put("dafa", "1234");
 
         EditText usernamefl = findViewById(R.id.usernamefl);

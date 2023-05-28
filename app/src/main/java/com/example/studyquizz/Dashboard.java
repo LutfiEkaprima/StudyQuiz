@@ -40,7 +40,7 @@ public class Dashboard extends Fragment {
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), Quiz.class);
+                Intent intent = new Intent(getActivity(),  PilihQuiz.class);
                 startActivity(intent);
 
             }
