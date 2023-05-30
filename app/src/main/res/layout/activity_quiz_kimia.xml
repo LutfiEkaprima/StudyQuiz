@@ -1,9 +1,83 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
     tools:context=".QuizKimia">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/text_view_question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Pertanyaan" />
+
+    <RadioGroup
+        android:id="@+id/radio_group_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_question"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/radio_button_option1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jawaban 1" />
+
+        <RadioButton
+            android:id="@+id/radio_button_option2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jawaban 2" />
+
+        <RadioButton
+            android:id="@+id/radio_button_option3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jawaban 3" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kembali"
+        android:layout_below="@id/radio_group_options"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/radio_group_options"
+        android:layout_marginTop="16dp"
+        android:text="Selanjutnya" />
+
+    <Button
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/radio_group_options"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/text_view_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:text="15:00" />
+
+</RelativeLayout>

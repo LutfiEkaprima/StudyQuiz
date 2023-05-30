@@ -11,11 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudyQuizz"
         tools:targetApi="31">
-        <activity android:name=".Profile"
-            android:exported="false"/>
-
-        <activity android:name=".PilihQuiz"
-            android:exported="false"/>
+        <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
+            android:name=".PilihQuiz"
+            android:exported="false" />
         <activity
             android:name=".QuizKimia"
             android:exported="false" />
