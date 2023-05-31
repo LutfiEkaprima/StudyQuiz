@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<!-- fragment_nilai.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".Quiz">
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Nilai">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/text_view_total_score"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="350dp"
-        android:text="ON PROGRESS"
-        android:fontFamily="@font/podkova_semibold"
-        android:textSize="50sp"
-        android:textColor="@color/black">
-    </TextView>
+        android:text="Total Score: "
+        android:textSize="16sp" />
 
 
-</RelativeLayout>
+
+</LinearLayout>

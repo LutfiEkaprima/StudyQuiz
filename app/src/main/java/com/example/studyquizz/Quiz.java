@@ -1,6 +1,8 @@
 package com.example.studyquizz;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -36,6 +38,8 @@ public class Quiz extends AppCompatActivity {
             new Question("Question 5?", "Answer 5a", "Answer 5b", "Answer 5c", "Answer 5a")
     };
 
+    private boolean quizCompleted;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +50,17 @@ public class Quiz extends AppCompatActivity {
         buttonNext = findViewById(R.id.button_next);
         buttonBack = findViewById(R.id.button_back);
         buttonSubmit = findViewById(R.id.button_submit);
+
+        // Cek apakah kuis telah selesai sebelumnya
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        quizCompleted = sharedPreferences.getBoolean("quizCompleted", false);
+
+        // Jika kuis telah selesai, kembali ke Menu.class
+        if (quizCompleted) {
+            Intent intent = new Intent(Quiz.this, Menu.class);
+            startActivity(intent);
+            finish();
+        }
 
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
@@ -130,13 +145,18 @@ public class Quiz extends AppCompatActivity {
     }
 
     private void finishQuiz() {
-        saveUserAnswer();
-
-        int totalScore = calculateScore();
-        Toast.makeText(this, "Your Score: " + totalScore + "/" + questions.length, Toast.LENGTH_SHORT).show();
+        score = calculateScore(); // Hitung skor sebelum menyimpannya
+        Toast.makeText(this, "Skor Anda: " + score + "/" + questions.length, Toast.LENGTH_SHORT).show();
         buttonNext.setEnabled(false);
         buttonBack.setEnabled(false);
         buttonSubmit.setEnabled(false);
+
+        // Simpan total skor ke SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("totalScore", score);
+        editor.putBoolean("quizCompleted", true);
+        editor.apply();
 
         // Kembali ke Menu.class setelah submit
         Intent intent = new Intent(Quiz.this, Menu.class);

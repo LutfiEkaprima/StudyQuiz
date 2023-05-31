@@ -1,6 +1,8 @@
 package com.example.studyquizz;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -38,16 +40,36 @@ public class MainActivity extends AppCompatActivity {
                 String capitalizedUsername = enteredUsername.substring(0, 1).toUpperCase() + enteredUsername.substring(1);
 
                 if (userMap.containsKey(enteredUsername) && userMap.get(enteredUsername).equals(enteredPassword)) {
+                    // Menghapus status "quizCompleted" saat login ulang
+                    SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.remove("quizCompleted");
+                    // Hapus data jawaban pengguna yang lain jika ada
+                    editor.remove("userAnswers");
+                    editor.remove("questionAnswered");
+                    editor.apply();
+
                     startActivity(new Intent(MainActivity.this, Menu.class));
                     logbt.setBackgroundColor(Color.BLUE);
-                    Toast.makeText(MainActivity.this, "Selamat Datang " + capitalizedUsername, Toast.LENGTH_SHORT).show();                } else {
+                    Toast.makeText(MainActivity.this, "Selamat Datang " + capitalizedUsername, Toast.LENGTH_SHORT).show();
+                } else {
                     logbt.setBackgroundColor(Color.RED);
                     Toast.makeText(MainActivity.this, "Username atau Password Salah", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // Menghapus data nilai saat pengguna logout
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.remove("totalScore");
+        editor.apply();
+    }
 
     @Override
     public void onBackPressed() {
