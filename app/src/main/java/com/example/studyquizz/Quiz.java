@@ -58,6 +58,7 @@ public class Quiz extends AppCompatActivity {
         // Jika kuis telah selesai, kembali ke Menu.class
         if (quizCompleted) {
             Intent intent = new Intent(Quiz.this, Menu.class);
+            Toast.makeText(Quiz.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
