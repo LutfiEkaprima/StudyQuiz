@@ -31,11 +31,11 @@ public class Quiz extends AppCompatActivity {
     private long timeLeftInMillis = 900000; // 15 minutes
 
     private Question[] questions = {
-            new Question("Question 1?", "Answer 1a", "Answer 1b", "Answer 1c", "Answer 1a"),
-            new Question("Question 2?", "Answer 2a", "Answer 2b", "Answer 2c", "Answer 2b"),
-            new Question("Question 3?", "Answer 3a", "Answer 3b", "Answer 3c", "Answer 3c"),
-            new Question("Question 4?", "Answer 4a", "Answer 4b", "Answer 4c", "Answer 4b"),
-            new Question("Question 5?", "Answer 5a", "Answer 5b", "Answer 5c", "Answer 5a")
+            new Question("Sebuah pesawat terbang bergerak ke arah Utara sejauh 13 km kemudianberbelok ke arah Timur sejauh 24 km dan berbelok lagi ke arah Selatan sejauh 3 km. Tentukan perpindahan yang dialami pesawat terbang!", "A. 23 km", "B. 24 km", "C. 25 km","D. 26 km", "D. 26 km"),
+            new Question("Question 2?", "Answer 2a", "Answer 2b", "Answer 2c","Answer 2d", "Answer 2b"),
+            new Question("Question 3?", "Answer 3a", "Answer 3b", "Answer 3c","Answer 3d", "Answer 3c"),
+            new Question("Question 4?", "Answer 4a", "Answer 4b", "Answer 4c","Answer 4d", "Answer 4b"),
+            new Question("Question 5?", "Answer 5a", "Answer 5b", "Answer 5c","Answer 5d", "Answer 5d")
     };
 
     private boolean quizCompleted;
@@ -51,11 +51,9 @@ public class Quiz extends AppCompatActivity {
         buttonBack = findViewById(R.id.button_back);
         buttonSubmit = findViewById(R.id.button_submit);
 
-        // Cek apakah kuis telah selesai sebelumnya
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         quizCompleted = sharedPreferences.getBoolean("quizCompleted", false);
 
-        // Jika kuis telah selesai, kembali ke Menu.class
         if (quizCompleted) {
             Intent intent = new Intent(Quiz.this, Menu.class);
             Toast.makeText(Quiz.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
@@ -104,16 +102,14 @@ public class Quiz extends AppCompatActivity {
 
     private void showQuestion(int questionIndex) {
         textViewQuestion.setText(questions[questionIndex].getQuestion());
-        RadioButton[] radioButtons = new RadioButton[3];
-        for (int i = 0; i < 3; i++) {
+        RadioButton[] radioButtons = new RadioButton[4];
+        for (int i = 0; i < 4; i++) {
             radioButtons[i] = (RadioButton) radioGroupOptions.getChildAt(i);
             radioButtons[i].setText(questions[questionIndex].getOptions()[i]);
         }
 
         radioGroupOptions.clearCheck();
         if (questionAnswered[questionIndex]) {
-            // Jika jawaban pengguna untuk pertanyaan ini sudah tersimpan,
-            // tandai kembali jawaban pengguna
             radioButtons[userAnswers[questionIndex]].setChecked(true);
         }
 
@@ -125,6 +121,7 @@ public class Quiz extends AppCompatActivity {
 
         if (questionIndex == questions.length - 1) {
             buttonNext.setText("Finish");
+            buttonNext.setVisibility(View.INVISIBLE);
             buttonSubmit.setVisibility(View.VISIBLE);
         } else {
             buttonNext.setText("Next");
@@ -135,31 +132,27 @@ public class Quiz extends AppCompatActivity {
     private void saveUserAnswer() {
         int selectedAnswerIndex = radioGroupOptions.indexOfChild(findViewById(radioGroupOptions.getCheckedRadioButtonId()));
         if (selectedAnswerIndex != -1) {
-            // Jika ada pilihan yang dipilih, simpan jawaban pengguna ke array
             userAnswers[currentQuestionIndex] = selectedAnswerIndex;
             questionAnswered[currentQuestionIndex] = true;
         } else {
-            // Jika tidak ada pilihan yang dipilih, tandai jawaban pengguna sebagai tidak tersimpan
             userAnswers[currentQuestionIndex] = -1;
             questionAnswered[currentQuestionIndex] = false;
         }
     }
 
     private void finishQuiz() {
-        score = calculateScore(); // Hitung skor sebelum menyimpannya
+        score = calculateScore();
         Toast.makeText(this, "Skor Anda: " + score + "/" + questions.length, Toast.LENGTH_SHORT).show();
         buttonNext.setEnabled(false);
         buttonBack.setEnabled(false);
         buttonSubmit.setEnabled(false);
 
-        // Simpan total skor ke SharedPreferences
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("totalScore", score);
         editor.putBoolean("quizCompleted", true);
         editor.apply();
 
-        // Kembali ke Menu.class setelah submit
         Intent intent = new Intent(Quiz.this, Menu.class);
         startActivity(intent);
         finish();
