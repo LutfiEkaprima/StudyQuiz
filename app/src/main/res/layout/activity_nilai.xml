@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
@@ -23,10 +23,9 @@
         <ImageView
             android:id="@+id/garis"
             android:layout_width="match_parent"
-            android:layout_height="10dp"
+            android:layout_height="30dp"
             android:layout_below="@+id/jdl_nilai"
             android:background="@drawable/minus">
-
         </ImageView>
 
         <TextView
@@ -45,21 +44,30 @@
         <TextView
             android:id="@+id/text_view_total_scoremtk"
             android:layout_below="@+id/jdl_mtk"
+            android:layout_marginStart="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nilai Quiz : Belum ada Quiz yang diambil"
+            android:text="@string/Nilai_Quiz"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/nilai_mtk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
             android:layout_marginTop="30dp"
-            android:text="Nilai Ujian : Belum ada Ujian yang diambil"
+            android:text="@string/Nilai_Ujian"
             android:layout_below="@+id/jdl_mtk"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_mtk"
+            android:background="@drawable/minus">
+        </ImageView>
 
         <TextView
             android:id="@+id/jdl_fsk"
@@ -79,19 +87,28 @@
             android:layout_below="@+id/jdl_fsk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nilai Quiz : Belum ada Quiz yang diambil"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/nilai_fsk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Nilai Ujian : Belum ada Ujian yang diambil"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
             android:layout_below="@+id/jdl_fsk"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_fsk"
+            android:background="@drawable/minus">
+        </ImageView>
 
         <TextView
             android:id="@+id/jdl_kimia"
@@ -111,19 +128,407 @@
             android:layout_below="@+id/jdl_kimia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nilai Quiz : Belum ada Quiz yang diambil"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
 
         <TextView
             android:id="@+id/nilai_kimia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Nilai Ujian : Belum ada Ujian yang diambil"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
             android:layout_below="@+id/jdl_kimia"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_kimia"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_bio"
+            android:layout_below="@+id/nilai_kimia"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BIOLOGI"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorebio"
+            android:layout_below="@+id/jdl_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_bio"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_bio"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_eko"
+            android:layout_below="@+id/nilai_bio"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EKONOMI"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scoreeko"
+            android:layout_below="@+id/jdl_eko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_eko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_eko"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/jdl_sjr"
+            android:layout_below="@+id/nilai_eko"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEJARAH"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scoresjr"
+            android:layout_below="@+id/jdl_sjr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_eko"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/nilai_sjr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_sjr"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_sjr"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_bindo"
+            android:layout_below="@+id/nilai_sjr"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BAHASA INDONESIA"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorebindo"
+            android:layout_below="@+id/jdl_bindo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_bindo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_bindo"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_bindo"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_bing"
+            android:layout_below="@+id/nilai_bindo"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BAHASA INGGRIS"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorebing"
+            android:layout_below="@+id/jdl_bing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_bing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_bing"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_bing"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_sbk"
+            android:layout_below="@+id/nilai_bing"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SENI BUDAYA"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scoresbk"
+            android:layout_below="@+id/jdl_sbk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_sbk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_sbk"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_sbk"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_pjok"
+            android:layout_below="@+id/nilai_sbk"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PJOK"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorepjok"
+            android:layout_below="@+id/jdl_pjok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_pjok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_pjok"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_pjok"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_pai"
+            android:layout_below="@+id/nilai_pjok"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAI"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorepai"
+            android:layout_below="@+id/jdl_pai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_pai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_pai"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_pai"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_pkn"
+            android:layout_below="@+id/nilai_pai"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PPKN"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorepkn"
+            android:layout_below="@+id/jdl_pkn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_pkn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_pkn"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_pkn"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nilai_pkn"
+            android:layout_marginTop="100dp"
+            android:visibility="invisible">
+
+        </TextView>
+
 
     </RelativeLayout>
 </ScrollView>

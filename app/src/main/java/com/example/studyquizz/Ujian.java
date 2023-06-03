@@ -31,7 +31,7 @@ public class Ujian extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pilih_quiz);
+        setContentView(R.layout.activity_ujian);
 
         buttonmtk = (Button) findViewById(R.id.mtk);
         buttonfsk = (Button) findViewById(R.id.fisika);

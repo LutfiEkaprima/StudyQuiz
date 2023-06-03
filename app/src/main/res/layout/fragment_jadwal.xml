@@ -99,34 +99,37 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="130dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Bahasa Inggris"
                 android:textSize="18sp"
                 android:layout_marginTop="160dp"
                 android:layout_marginStart="40dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
-                android:textSize="15sp"
+                android:layout_marginStart="200dp"
                 android:layout_marginTop="160dp"
-                android:layout_marginStart="150dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:text="10:00 - 11:30"
+                android:textColor="@color/black"
+                android:textSize="15sp">
+
             </TextView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Seni Budaya"
                 android:textSize="18sp"
                 android:layout_marginTop="190dp"
                 android:layout_marginStart="40dp"
@@ -136,17 +139,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="12:30 - 13:30"
                 android:textSize="15sp"
                 android:layout_marginTop="190dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Sejarah"
                 android:textSize="18sp"
                 android:layout_marginTop="220dp"
                 android:layout_marginStart="40dp"
@@ -156,10 +159,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="13:30 - 14:30"
                 android:textSize="15sp"
                 android:layout_marginTop="220dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
@@ -214,7 +217,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="PJOK"
                 android:textSize="18sp"
                 android:layout_marginTop="130dp"
                 android:layout_marginStart="40dp"
@@ -227,14 +230,14 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="130dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Bhs. Indonesia"
                 android:textSize="18sp"
                 android:layout_marginTop="160dp"
                 android:layout_marginStart="40dp"
@@ -244,17 +247,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="10:00 - 11:30"
                 android:textSize="15sp"
                 android:layout_marginTop="160dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Kimia"
                 android:textSize="18sp"
                 android:layout_marginTop="190dp"
                 android:layout_marginStart="40dp"
@@ -264,10 +267,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="12:30 - 14:30"
                 android:textSize="15sp"
                 android:layout_marginTop="190dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
@@ -279,7 +282,8 @@
                 android:layout_marginTop="220dp"
                 android:layout_marginStart="40dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:visibility="invisible">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
@@ -287,9 +291,10 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="220dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:visibility="invisible">
             </TextView>
         </FrameLayout>
 
@@ -342,7 +347,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="PAI"
                 android:textSize="18sp"
                 android:layout_marginTop="130dp"
                 android:layout_marginStart="40dp"
@@ -355,14 +360,14 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="130dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Ekonomi"
                 android:textSize="18sp"
                 android:layout_marginTop="160dp"
                 android:layout_marginStart="40dp"
@@ -372,17 +377,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="10:00 - 11:30"
                 android:textSize="15sp"
                 android:layout_marginTop="160dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="PPKN"
                 android:textSize="18sp"
                 android:layout_marginTop="190dp"
                 android:layout_marginStart="40dp"
@@ -392,17 +397,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="12:30 - 13:30"
                 android:textSize="15sp"
                 android:layout_marginTop="190dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Konseling"
                 android:textSize="18sp"
                 android:layout_marginTop="220dp"
                 android:layout_marginStart="40dp"
@@ -412,10 +417,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="13:30 - 14:30"
                 android:textSize="15sp"
                 android:layout_marginTop="220dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
@@ -470,7 +475,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Matematika"
                 android:textSize="18sp"
                 android:layout_marginTop="130dp"
                 android:layout_marginStart="40dp"
@@ -483,14 +488,14 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="130dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Biologi"
                 android:textSize="18sp"
                 android:layout_marginTop="160dp"
                 android:layout_marginStart="40dp"
@@ -500,17 +505,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="10:00 - 11:30"
                 android:textSize="15sp"
                 android:layout_marginTop="160dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="KWU"
                 android:textSize="18sp"
                 android:layout_marginTop="190dp"
                 android:layout_marginStart="40dp"
@@ -520,10 +525,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="13:00 - 14:00"
                 android:textSize="15sp"
                 android:layout_marginTop="190dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
@@ -535,7 +540,8 @@
                 android:layout_marginTop="220dp"
                 android:layout_marginStart="40dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:visibility="invisible">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
@@ -543,9 +549,10 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="220dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:visibility="invisible">
             </TextView>
         </FrameLayout>
 
@@ -598,7 +605,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Tausiah"
                 android:textSize="18sp"
                 android:layout_marginTop="130dp"
                 android:layout_marginStart="40dp"
@@ -611,14 +618,14 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="130dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fisika"
+                android:text="Matematika"
                 android:textSize="18sp"
                 android:layout_marginTop="160dp"
                 android:layout_marginStart="40dp"
@@ -628,10 +635,10 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="08:00 - 09:30"
+                android:text="10:00 - 11:15"
                 android:textSize="15sp"
                 android:layout_marginTop="160dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
                 android:textColor="@color/black">
             </TextView>
@@ -643,7 +650,8 @@
                 android:layout_marginTop="190dp"
                 android:layout_marginStart="40dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:visibility="invisible">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
@@ -651,9 +659,10 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="190dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:visibility="invisible">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
@@ -663,7 +672,8 @@
                 android:layout_marginTop="220dp"
                 android:layout_marginStart="40dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:visibility="invisible">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
@@ -671,9 +681,10 @@
                 android:text="08:00 - 09:30"
                 android:textSize="15sp"
                 android:layout_marginTop="220dp"
-                android:layout_marginStart="150dp"
+                android:layout_marginStart="200dp"
                 android:fontFamily="@font/poppinssemibold"
-                android:textColor="@color/black">
+                android:textColor="@color/black"
+                android:visibility="invisible">
             </TextView>
         </FrameLayout>
 

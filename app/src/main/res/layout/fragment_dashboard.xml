@@ -8,27 +8,27 @@
 
     <ImageView
         android:id="@+id/quiz"
-        android:layout_width="377dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
         android:layout_marginTop="250dp"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/quiz">
     </ImageView>
 
     <ImageView
         android:id="@+id/ujian"
-        android:layout_width="377dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="380dp"
         android:background="@drawable/ujian">
     </ImageView>
 
     <ImageView
         android:id="@+id/nilai"
-        android:layout_width="377dp"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="510dp"
         android:background="@drawable/nilai">
     </ImageView>
