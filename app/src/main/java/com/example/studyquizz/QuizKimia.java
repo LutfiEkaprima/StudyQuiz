@@ -29,11 +29,11 @@ public class QuizKimia extends AppCompatActivity {
     private long timeLeftInMillis = 900000; // 15 minutes
 
     private Question[] questions = {
-            new Question("Question 1?", "Answer 1a", "Answer 1b", "Answer 1c", "Answer 1a"),
-            new Question("Question 2?", "Answer 2a", "Answer 2b", "Answer 2c", "Answer 2b"),
-            new Question("Question 3?", "Answer 3a", "Answer 3b", "Answer 3c", "Answer 3c"),
-            new Question("Question 4?", "Answer 4a", "Answer 4b", "Answer 4c", "Answer 4b"),
-            new Question("Question 5?", "Answer 5a", "Answer 5b", "Answer 5c", "Answer 5a")
+            new Question("Question 1?", "Answer 1a", "Answer 1b", "Answer 1c", "Answer 1d","Answer 1d"),
+            new Question("Question 2?", "Answer 2a", "Answer 2b", "Answer 2c", "Answer 2d","Answer 2b"),
+            new Question("Question 3?", "Answer 3a", "Answer 3b", "Answer 3c", "Answer 3d","Answer 3c"),
+            new Question("Question 4?", "Answer 4a", "Answer 4b", "Answer 4c", "Answer 4d","Answer 4b"),
+            new Question("Question 5?", "Answer 5a", "Answer 5b", "Answer 5c", "Answer 5d","Answer 5a")
     };
 
     @Override
@@ -88,8 +88,8 @@ public class QuizKimia extends AppCompatActivity {
 
     private void showQuestion(int questionIndex) {
         textViewQuestion.setText(questions[questionIndex].getQuestion());
-        RadioButton[] radioButtons = new RadioButton[3];
-        for (int i = 0; i < 3; i++) {
+        RadioButton[] radioButtons = new RadioButton[4];
+        for (int i = 0; i < 4; i++) {
             radioButtons[i] = (RadioButton) radioGroupOptions.getChildAt(i);
             radioButtons[i].setText(questions[questionIndex].getOptions()[i]);
         }

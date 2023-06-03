@@ -1,11 +1,13 @@
 package com.example.studyquizz;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 
@@ -58,12 +60,28 @@ public class PilihQuiz extends AppCompatActivity {
         buttonfsk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Quiz.class);
-                startActivity(intent);
-                buttonfsk.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai quiz?")
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, Quiz.class);
+                                startActivity(intent);
+                                buttonfsk.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                // Kosongkan untuk menutup dialog
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
+
 
         buttonkimia.setOnClickListener(new View.OnClickListener() {
             @Override
