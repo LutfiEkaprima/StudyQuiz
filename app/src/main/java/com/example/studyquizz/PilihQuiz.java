@@ -86,7 +86,7 @@ public class PilihQuiz extends AppCompatActivity {
         buttonkimia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  QuizKimia.class);
+                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
                 startActivity(intent);
                 buttonkimia.setBackgroundColor(Color.BLUE);
 

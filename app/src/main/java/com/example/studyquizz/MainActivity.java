@@ -40,11 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 String capitalizedUsername = enteredUsername.substring(0, 1).toUpperCase() + enteredUsername.substring(1);
 
                 if (userMap.containsKey(enteredUsername) && userMap.get(enteredUsername).equals(enteredPassword)) {
-                    // Menghapus status "quizCompleted" saat login ulang
                     SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     editor.remove("quizCompleted");
-                    // Hapus data jawaban pengguna yang lain jika ada
+                    editor.remove("ujianCompleted");
                     editor.remove("userAnswers");
                     editor.remove("questionAnswered");
                     editor.apply();
@@ -64,10 +63,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        // Menghapus data nilai saat pengguna logout
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.remove("totalScore");
+        editor.remove("nilai");
         editor.apply();
     }
 

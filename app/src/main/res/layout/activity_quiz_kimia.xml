@@ -40,6 +40,12 @@
             android:layout_height="wrap_content"
             android:text="Jawaban 3" />
 
+        <RadioButton
+            android:id="@+id/radio_button_option4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jawaban 4" />
+
     </RadioGroup>
 
     <Button

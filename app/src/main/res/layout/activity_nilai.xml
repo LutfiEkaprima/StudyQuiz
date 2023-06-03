@@ -1,20 +1,129 @@
-<!-- fragment_nilai.xml -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".Nilai">
+    android:background="@color/white"
+    android:padding="16dp">
 
-    <TextView
-        android:id="@+id/text_view_total_score"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Score: "
-        android:textSize="16sp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/jdl_nilai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NILAI SISWA"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium">
+        </TextView>
 
+        <ImageView
+            android:id="@+id/garis"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_below="@+id/jdl_nilai"
+            android:background="@drawable/minus">
 
-</LinearLayout>
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_mtk"
+            android:layout_below="@+id/garis"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MATEMATIKA"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scoremtk"
+            android:layout_below="@+id/jdl_mtk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Quiz : Belum ada Quiz yang diambil"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/nilai_mtk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Nilai Ujian : Belum ada Ujian yang diambil"
+            android:layout_below="@+id/jdl_mtk"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/jdl_fsk"
+            android:layout_below="@+id/nilai_mtk"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FISIKA"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_score"
+            android:layout_below="@+id/jdl_fsk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Quiz : Belum ada Quiz yang diambil"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/nilai_fsk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Nilai Ujian : Belum ada Ujian yang diambil"
+            android:layout_below="@+id/jdl_fsk"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/jdl_kimia"
+            android:layout_below="@+id/nilai_fsk"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KIMIA"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorekimia"
+            android:layout_below="@+id/jdl_kimia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nilai Quiz : Belum ada Quiz yang diambil"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/nilai_kimia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Nilai Ujian : Belum ada Ujian yang diambil"
+            android:layout_below="@+id/jdl_kimia"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+</ScrollView>

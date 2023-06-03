@@ -14,11 +14,13 @@ public class Nilai extends AppCompatActivity {
         setContentView(R.layout.activity_nilai);
 
         textViewTotalScore = findViewById(R.id.text_view_total_score);
+        TextView nilaikimia1 = findViewById(R.id.nilai_kimia);
 
-        // Ambil total skor dari SharedPreferences
         int totalScore = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("totalScore", 0);
+        int nilai = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilai", 0);
 
         // Tampilkan total skor
-        textViewTotalScore.setText("Total Skor: " + totalScore + "/5");
+        textViewTotalScore.setText("Nilai Quiz   : " + totalScore * 20);
+        nilaikimia1.setText("Nilai Ujian    : " + nilai * 20);
     }
 }

@@ -1,6 +1,9 @@
 package com.example.studyquizz;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
@@ -10,6 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class QuizKimia extends AppCompatActivity {
@@ -36,6 +40,8 @@ public class QuizKimia extends AppCompatActivity {
             new Question("Question 5?", "Answer 5a", "Answer 5b", "Answer 5c", "Answer 5d","Answer 5a")
     };
 
+    private boolean ujianCompleted;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +55,19 @@ public class QuizKimia extends AppCompatActivity {
 
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        ujianCompleted = sharedPreferences.getBoolean("ujianCompleted", false);
+
+        if (ujianCompleted) {
+            Intent intent = new Intent(QuizKimia.this, Menu.class);
+            Toast.makeText(QuizKimia.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+            startActivity(intent);
+            finish();
+        }
+
+        userAnswers = new int[questions.length];
+        questionAnswered = new boolean[questions.length];
+
 
         showQuestion(currentQuestionIndex);
 
@@ -130,13 +149,20 @@ public class QuizKimia extends AppCompatActivity {
     }
 
     private void finishQuiz() {
-        saveUserAnswer();
+        score = calculateScore();
+        Toast.makeText(this, "Skor Anda: " + score + "/" + questions.length, Toast.LENGTH_SHORT).show();
 
-        int totalScore = calculateScore();
-        Toast.makeText(this, "Your Score: " + totalScore + "/" + questions.length, Toast.LENGTH_SHORT).show();
         buttonNext.setEnabled(false);
         buttonBack.setEnabled(false);
         buttonSubmit.setEnabled(false);
+        countDownTimer.cancel();
+
+        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("nilai", score);
+        editor.putBoolean("ujianCompleted", true);
+        editor.apply();
+
 
         // Kembali ke Menu.class setelah submit
         Intent intent = new Intent(QuizKimia.this, Menu.class);
@@ -177,5 +203,25 @@ public class QuizKimia extends AppCompatActivity {
 
         TextView textViewTimer = findViewById(R.id.text_view_timer);
         textViewTimer.setText(timeLeftFormatted);
+    }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Konfirmasi")
+                .setMessage("Apakah Anda ingin menyelesaikan quiz?")
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finishQuiz();
+                    }
+                })
+                .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
     }
 }

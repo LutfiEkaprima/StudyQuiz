@@ -1,22 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Quiz">
+    android:backgroundTint="@color/white"
+    tools:context=".PilihQuiz">
 
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="350dp"
-        android:text="ON PROGRESS"
-        android:fontFamily="@font/podkova_semibold"
-        android:textSize="50sp"
-        android:textColor="@color/black">
-    </TextView>
+        android:layout_height="match_parent">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="UJIAN"
+            android:textSize="30dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black">
 
-</RelativeLayout>
+        </TextView>
+
+        <Button
+            android:id="@+id/mtk"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/kuning"
+            android:text="MATEMATIKA"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/fisika"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="FISIKA"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/biologi"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="BIOLOGI"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/ekonomi"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="EKONOMI"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/sejarah"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="SEJARAH"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/bhsindo"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="BAHASA INDONESIA"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/bhsing"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="580dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="BAHASA INGGRIS"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/sbk"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="660dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="SENI BUDAYA"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/kimia"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="740dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="KIMIA"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/pai"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="820dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="PAI"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/pjok"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="900dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="PJOK"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/pkn"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="980dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="PPKN"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1100dp">
+
+        </TextView>
+
+    </RelativeLayout>
+</ScrollView>
