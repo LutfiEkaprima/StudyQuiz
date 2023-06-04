@@ -62,8 +62,8 @@ public class PilihQuiz extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
                 builder.setTitle("Konfirmasi")
-                        .setMessage("Apakah Anda ingin memulai quiz?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 Intent intent = new Intent(PilihQuiz.this, Quiz.class);
@@ -71,10 +71,9 @@ public class PilihQuiz extends AppCompatActivity {
                                 buttonfsk.setBackgroundColor(Color.BLUE);
                             }
                         })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                // Kosongkan untuk menutup dialog
                             }
                         })
                         .create()

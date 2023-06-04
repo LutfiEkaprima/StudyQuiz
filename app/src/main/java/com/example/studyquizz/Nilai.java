@@ -19,7 +19,7 @@ public class Nilai extends AppCompatActivity {
         int totalScore = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("totalScore", 0);
         int nilai = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilai", 0);
 
-        // Tampilkan total skor
+
         textViewTotalScore.setText("Nilai Quiz   : " + totalScore * 20);
         nilaikimia1.setText("Nilai Ujian    : " + nilai * 20);
     }

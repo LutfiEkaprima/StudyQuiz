@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -28,17 +29,20 @@ public class Quiz extends AppCompatActivity {
     private int score = 0;
     private int[] userAnswers;
     private boolean[] questionAnswered;
+    private ImageView imageViewQuestion;
+
 
     private CountDownTimer countDownTimer;
-    private long timeLeftInMillis = 900000; // 15 minutes
+    private long timeLeftInMillis = 900000; //
 
-    private Question[] questions = {
-            new Question("Question 1?", "Answer 1a", "Answer 1b", "Answer 1c", "Answer 1d","Answer 1d"),
-            new Question("Question 2?", "Answer 2a", "Answer 2b", "Answer 2c", "Answer 2d","Answer 2b"),
-            new Question("Question 3?", "Answer 3a", "Answer 3b", "Answer 3c", "Answer 3d","Answer 3c"),
-            new Question("Question 4?", "Answer 4a", "Answer 4b", "Answer 4c", "Answer 4d","Answer 4b"),
-            new Question("Question 5?", "Answer 5a", "Answer 5b", "Answer 5c", "Answer 5d","Answer 5a")
+    Question[] questions = {
+            new Question("1. Dua benda dengan massa yang sama dipasang pada ujung-ujung dari sebuah batang seperti pada gambar, Jika batang dalam kondisi setimbang dan poros dapat berputar, maka batang .... jika benda di sisi kanan didekatkan ke arah poros","A. akan berputar searah jarum jam ", "B. akan berputar berlawanan arah jarum jam", "C. tidak berputar", "C. tidak berputar", "B. akan berputar berlawanan arah jarum jam", R.drawable.image1),
+            new Question("2. Tiga buah pegas dengan konstanta pegas k = 600 N.m-1 disusun seri dan paralel seperti pada gambar, Jika ujung bawah susunan pegas diberi beban sebesar m = 2 kg, maka pertambahan panjang pegas adalah ...","A. 4 cm", "B. 5 cm", "C. 10 cm", "D. 0,5 cm","B. 5 cm",R.drawable.image2),
+            new Question("3. Seekor kuda bermassa 100 kg memakai sepatu yang ditempeli pegas identik pada keempat kakinya. Tekanan akibat berat badan kuda tersebut terdistribusi merata pada keempat kakinya. Ketika kuda berdiri dengan 4 kaki, pegas menjadi 2 cm lebih pendek. Perubahan panjang pegas jika kuda tersebut berdiri dengan dua kaki adalah ... cm","A. 2", "B. 2,5", "C. 3", "D. 4", "D. 4", 0),
+            new Question("4. Nilai konstanta elastisitas yang sama dari percobaan elastisitas karet ban pada tabel berikut adalah","A. (1) dan (2)", "B. (1) dan (4)", "C. (1) dan (5)", "D. (2) dan (3)", "B. (1) dan (4)", R.drawable.image4),
+            new Question("5. Sepotong kawat logam homogen dengan panjang 140 cm dan luas penampangnya 2 mm2 ketika ditarik dengan gaya sebesar 100 N bertambah panjang 1 mm. Modulus elastik bahan kawat logam tersebut adalah ... ","A. 7 x 108 N/m3", "B. 7 x 109 N/m3", "C. 7 x 1010 N/m3", "D. 7 x 1011 N/m3", "C. 7 x 1010 N/m3", 0)
     };
+
 
     private boolean quizCompleted;
 
@@ -46,6 +50,8 @@ public class Quiz extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        imageViewQuestion = findViewById(R.id.image_view_question);
+
 
         textViewQuestion = findViewById(R.id.text_view_question);
         radioGroupOptions = findViewById(R.id.radio_group_options);
@@ -107,6 +113,15 @@ public class Quiz extends AppCompatActivity {
 
     private void showQuestion(int questionIndex) {
         textViewQuestion.setText(questions[questionIndex].getQuestion());
+
+        if (questions[questionIndex].getImageResource() != 0) {
+            imageViewQuestion.setVisibility(View.VISIBLE);
+            imageViewQuestion.setImageResource(questions[questionIndex].getImageResource());
+        } else {
+            imageViewQuestion.setVisibility(View.GONE);
+        }
+
+
         RadioButton[] radioButtons = new RadioButton[4];
         for (int i = 0; i < 4; i++) {
             radioButtons[i] = (RadioButton) radioGroupOptions.getChildAt(i);
@@ -115,8 +130,6 @@ public class Quiz extends AppCompatActivity {
 
         radioGroupOptions.clearCheck();
         if (questionAnswered[questionIndex]) {
-            // Jika jawaban pengguna untuk pertanyaan ini sudah tersimpan,
-            // tandai kembali jawaban pengguna
             radioButtons[userAnswers[questionIndex]].setChecked(true);
         }
 
@@ -128,7 +141,7 @@ public class Quiz extends AppCompatActivity {
 
         if (questionIndex == questions.length - 1) {
             buttonNext.setText("Finish");
-            buttonSubmit.setVisibility(View.VISIBLE);
+            buttonSubmit.setVisibility(View.INVISIBLE);
         } else {
             buttonNext.setText("Next");
             buttonSubmit.setVisibility(View.GONE);
@@ -138,11 +151,9 @@ public class Quiz extends AppCompatActivity {
     private void saveUserAnswer() {
         int selectedAnswerIndex = radioGroupOptions.indexOfChild(findViewById(radioGroupOptions.getCheckedRadioButtonId()));
         if (selectedAnswerIndex != -1) {
-            // Jika ada pilihan yang dipilih, simpan jawaban pengguna ke array
             userAnswers[currentQuestionIndex] = selectedAnswerIndex;
             questionAnswered[currentQuestionIndex] = true;
         } else {
-            // Jika tidak ada pilihan yang dipilih, tandai jawaban pengguna sebagai tidak tersimpan
             userAnswers[currentQuestionIndex] = -1;
             questionAnswered[currentQuestionIndex] = false;
         }
@@ -164,7 +175,6 @@ public class Quiz extends AppCompatActivity {
         editor.apply();
 
 
-        // Kembali ke Menu.class setelah submit
         Intent intent = new Intent(Quiz.this, Menu.class);
         startActivity(intent);
         finish();

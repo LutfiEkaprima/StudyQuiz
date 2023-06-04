@@ -73,8 +73,8 @@ public class Ujian extends AppCompatActivity {
             public void onClick(View view) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Ujian.this);
                 builder.setTitle("Konfirmasi")
-                        .setMessage("Apakah Anda ingin memulai quiz?")
-                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                        .setMessage("Apakah Anda ingin memulai Ujian?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
                                 Intent intent = new Intent(Ujian.this, QuizKimia.class);
@@ -82,10 +82,10 @@ public class Ujian extends AppCompatActivity {
                                 buttonkimia.setBackgroundColor(Color.BLUE);
                             }
                         })
-                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                // Kosongkan untuk menutup dialog
+
                             }
                         })
                         .create()
