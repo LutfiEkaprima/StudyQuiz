@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Quiz extends AppCompatActivity {
+public class UjianBindo extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -36,15 +36,19 @@ public class Quiz extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-            new Question("1. Dua benda dengan massa yang sama dipasang pada ujung-ujung dari sebuah batang seperti pada gambar, Jika batang dalam kondisi setimbang dan poros dapat berputar, maka batang .... jika benda di sisi kanan didekatkan ke arah poros","A. akan berputar searah jarum jam ", "B. akan berputar berlawanan arah jarum jam", "C. tidak berputar", "D. tidak berputar", "B. akan berputar berlawanan arah jarum jam", R.drawable.image1),
-            new Question("2. Tiga buah pegas dengan konstanta pegas k = 600 N.m-1 disusun seri dan paralel seperti pada gambar, Jika ujung bawah susunan pegas diberi beban sebesar m = 2 kg, maka pertambahan panjang pegas adalah ...","A. 4 cm", "B. 5 cm", "C. 10 cm", "D. 0,5 cm","B. 5 cm",R.drawable.image2),
-            new Question("3. Seekor kuda bermassa 100 kg memakai sepatu yang ditempeli pegas identik pada keempat kakinya. Tekanan akibat berat badan kuda tersebut terdistribusi merata pada keempat kakinya. Ketika kuda berdiri dengan 4 kaki, pegas menjadi 2 cm lebih pendek. Perubahan panjang pegas jika kuda tersebut berdiri dengan dua kaki adalah ... cm","A. 2", "B. 2,5", "C. 3", "D. 4", "D. 4", 0),
-            new Question("4. Nilai konstanta elastisitas yang sama dari percobaan elastisitas karet ban pada tabel berikut adalah","A. (1) dan (2)", "B. (1) dan (4)", "C. (1) dan (5)", "D. (2) dan (3)", "B. (1) dan (4)", R.drawable.image4),
-            new Question("5. Sepotong kawat logam homogen dengan panjang 140 cm dan luas penampangnya 2 mm2 ketika ditarik dengan gaya sebesar 100 N bertambah panjang 1 mm. Modulus elastik bahan kawat logam tersebut adalah ... ","A. 7 x 108 N/m3", "B. 7 x 109 N/m3", "C. 7 x 1010 N/m3", "D. 7 x 1011 N/m3", "C. 7 x 1010 N/m3", 0)
-    };
+            new Question("1. Berikut ini yang tidak termasuk unsur-unsur dalam surat lamaran pekerjaan adalah ….","A. tanggal surat ", "B. alamat surat", "C. ucapan terimakasih", "D. isi surat", "C. ucapan terimakasih",0),
 
+            new Question("2. Langkah yang tepat untuk meyakinkan pendengar atas pendapat seseorang pembicara adalah ….","A. Tujuan jelas, mengemukakan fakta, tidak berbelit-belit (satu tema) ", "B. Tujuan jelas, menggunakan ilustrasi, wajah serius.", "C. Tujuan jelas, berwajah serius, berterus terang.", "D. Tujuan jelas, memakai kata-kata ilmiah, menggunakan teks.", "A. Tujuan jelas, mengemukakan fakta, tidak berbelit-belit (satu tema) ", 0),
 
-    private boolean quizCompleted;
+            new Question("3. Karena pengaruh globalisasi dan tuntutan kehidupan, masyarakat akan mengalami pergeseran apresiasi dan cara pandang terhadap berbagai aspek kehidup. Berbagai aspek kehidupan itu sendiri juga mengalami perubahan-perubahan yang berarti. Untuk menjelaskan bagaimana pendidikan masa depan harus dilaksanakan, berbagai tuntutan kebutuhan dan fenomena yang terjadi dalam masyarakat perlu dicermati secara seksama. Berbagai tuntutan itulah nantinya akan memaksa dunia pendidikan untuk berbenah diri. Dunia kerja, misalnya, dapat dipastikan akan menuju kepada spesialisasi dan profesionalisasi.\n\n\t\t\t\tSementara itu, ada geseran apresiasi masarakat terhadap nilai-nilai kehidupan sehingga masyarakat menjadi longgar terhadap berperilaku yang kurang lazim dalam budaya Indonesia. Misalnya, mencium pipi antara dua insan yang berlainan jenis di remaja. Itu semua menjurus kepada penyimpangan norma agama. \n\nKutipan di atas menyatakan ….","A. fakta ", "B. pendapat", "C. analisi", "D. deskripsi", "A. fakta ", 0),
+
+            new Question("4. Bahasa laporan hendaknya tidak memenuhi kriteria berikut ….","A. logis ", "B. baku", "C. jelas", "D. rancu", "D. rancu", 0),
+
+            new Question("5. Bacalah teks berikut dengan seksama!\n\nSemburan Baru Muncul di Mindi Semburan lumpur, air, dan gas baru keluar dari halaman belakang rumah salah seorang penduduk warga Desa Mendi, Kecamatan Porong, Kabupaten Sidoarjo. Semburan ini merupakan semburan ke-59 yang muncul di sekitaran pusat semburan utama. Menurut seorang ahli dari Leader Team Frgaco, perusahaan yang mengawasi gas-gas berbahaya disekitar pusat semburan, semburan sama dengan 58 semburan liar sebelumnya. Semburan liar itu juga tidak berbahaya dan akan membesar. Kalau dibiarkan semburan itu akan mengecil sendiri. Untuk menutup semburan, hari ini akan dimasukkan 100 kilogram semen ke dalam lubang asal semburan.","A. Mengecilnya semburan liar ", "B. Pendapat tentang semburan liar", "C. Munculnya semburan liar", "D. Penutupan lubang semburan", "B. Pendapat tentang semburan liar", 0),
+
+            };
+
+    private boolean ujianindoCompleted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +66,11 @@ public class Quiz extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizCompleted = sharedPreferences.getBoolean("quizCompleted", false);
+        ujianindoCompleted = sharedPreferences.getBoolean("ujianindoCompleted", false);
 
-        if (quizCompleted) {
-            Intent intent = new Intent(Quiz.this, Menu.class);
-            Toast.makeText(Quiz.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (ujianindoCompleted) {
+            Intent intent = new Intent(UjianBindo.this, Menu.class);
+            Toast.makeText(UjianBindo.this, "Anda Telah Melakukan Ujian", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -170,12 +174,12 @@ public class Quiz extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("totalScore", score);
-        editor.putBoolean("quizCompleted", true);
+        editor.putInt("totalScoreindo", score);
+        editor.putBoolean("ujianindoCompleted", true);
         editor.apply();
 
 
-        Intent intent = new Intent(Quiz.this, Menu.class);
+        Intent intent = new Intent(UjianBindo.this, Menu.class);
         startActivity(intent);
         finish();
     }

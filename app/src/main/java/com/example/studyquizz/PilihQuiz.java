@@ -115,10 +115,24 @@ public class PilihQuiz extends AppCompatActivity {
         buttonsjr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonsjr.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSejarah.class);
+                                startActivity(intent);
+                                buttonsjr.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 

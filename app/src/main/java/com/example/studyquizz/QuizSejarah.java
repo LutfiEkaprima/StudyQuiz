@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Quiz extends AppCompatActivity {
+public class QuizSejarah extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -36,15 +36,14 @@ public class Quiz extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-            new Question("1. Dua benda dengan massa yang sama dipasang pada ujung-ujung dari sebuah batang seperti pada gambar, Jika batang dalam kondisi setimbang dan poros dapat berputar, maka batang .... jika benda di sisi kanan didekatkan ke arah poros","A. akan berputar searah jarum jam ", "B. akan berputar berlawanan arah jarum jam", "C. tidak berputar", "D. tidak berputar", "B. akan berputar berlawanan arah jarum jam", R.drawable.image1),
-            new Question("2. Tiga buah pegas dengan konstanta pegas k = 600 N.m-1 disusun seri dan paralel seperti pada gambar, Jika ujung bawah susunan pegas diberi beban sebesar m = 2 kg, maka pertambahan panjang pegas adalah ...","A. 4 cm", "B. 5 cm", "C. 10 cm", "D. 0,5 cm","B. 5 cm",R.drawable.image2),
-            new Question("3. Seekor kuda bermassa 100 kg memakai sepatu yang ditempeli pegas identik pada keempat kakinya. Tekanan akibat berat badan kuda tersebut terdistribusi merata pada keempat kakinya. Ketika kuda berdiri dengan 4 kaki, pegas menjadi 2 cm lebih pendek. Perubahan panjang pegas jika kuda tersebut berdiri dengan dua kaki adalah ... cm","A. 2", "B. 2,5", "C. 3", "D. 4", "D. 4", 0),
-            new Question("4. Nilai konstanta elastisitas yang sama dari percobaan elastisitas karet ban pada tabel berikut adalah","A. (1) dan (2)", "B. (1) dan (4)", "C. (1) dan (5)", "D. (2) dan (3)", "B. (1) dan (4)", R.drawable.image4),
-            new Question("5. Sepotong kawat logam homogen dengan panjang 140 cm dan luas penampangnya 2 mm2 ketika ditarik dengan gaya sebesar 100 N bertambah panjang 1 mm. Modulus elastik bahan kawat logam tersebut adalah ... ","A. 7 x 108 N/m3", "B. 7 x 109 N/m3", "C. 7 x 1010 N/m3", "D. 7 x 1011 N/m3", "C. 7 x 1010 N/m3", 0)
+            new Question("1. Berita menyerahnya Jepang dapat diketahui oleh seorang tokoh pemuda melalui ....", "A. pengumuman di koran-koran ", "B. radio BBC", "C.selebaran dari Sekutu", "D. berita televisi asing", "B. radio BBC", 0),
+            new Question("2. Kota Nagasaki dijatuhi bom atom oleh Sekutu pada tanggal ....", "A. 9 Agustus 1945", "B. 10 Agustus 1945", "C. 8 Agustus 1945", "D. 11 Agustus 1945", "A. 9 Agustus 1945", 0),
+            new Question("3. Jaminan yang diberikan kepada para pemuda di Rengasdengklok sehingga mereka sepakat untuk membawa Soekarno-Hatta kembali ke Jakarta adalah ....", "A. proklamasi akan disusun dalam sidang PPKI ", "B. pemerintah akan mewujudkan masyarakat adil dan makmur", "C. proklamasi akan dilaksanakan selambat-lambatnya tanggal 17 Agustus 1945", "D. para pemuda akan diikutsertakan dalam pemerintahan", "C. proklamasi akan dilaksanakan selambat-lambatnya tanggal 17 Agustus 1945", 0),
+            new Question("4. Latar belakang terjadinya Peristiwa Rengasdengklok adalah ....", "A. pertentangan antara para pemuda dengan golongan tua tentang proklamasi kemerdekaan ", "B. Adanya perintah dari Jepang", "C. para pemudaingin memproklamasikan kemerdekaan di Rengasdengklok", "D. para pemuda ingin memproklamasikan kemerdekaan Indonesia", "A. pertentangan antara para pemuda dengan golongan tua tentang proklamasi kemerdekaan ", 0),
+            new Question("5. Dalam kabinet pertama RI, menteri pengajaran dijabat oleh ....", "A. Ir.Soekarno ", "B. MR. Ahmad Soebardjo", "C. Muhammad Yamin", "D. Ki Hajar Dewantara", "D. Ki Hajar Dewantara", 0),
     };
 
-
-    private boolean quizCompleted;
+    private boolean quizsejarahCompleted;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,11 +61,11 @@ public class Quiz extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizCompleted = sharedPreferences.getBoolean("quizCompleted", false);
+        quizsejarahCompleted = sharedPreferences.getBoolean("quizsejarahCompleted", false);
 
-        if (quizCompleted) {
-            Intent intent = new Intent(Quiz.this, Menu.class);
-            Toast.makeText(Quiz.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizsejarahCompleted) {
+            Intent intent = new Intent(QuizSejarah.this, Menu.class);
+            Toast.makeText(QuizSejarah.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -170,12 +169,12 @@ public class Quiz extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("totalScore", score);
-        editor.putBoolean("quizCompleted", true);
+        editor.putInt("totalScoresejarah", score);
+        editor.putBoolean("quizsejarahCompleted", true);
         editor.apply();
 
 
-        Intent intent = new Intent(Quiz.this, Menu.class);
+        Intent intent = new Intent(QuizSejarah.this, Menu.class);
         startActivity(intent);
         finish();
     }

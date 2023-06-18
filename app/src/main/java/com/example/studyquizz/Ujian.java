@@ -136,10 +136,25 @@ public class Ujian extends AppCompatActivity {
         buttonind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Ujian.this,  Warning.class);
-                startActivity(intent);
-                buttonind.setBackgroundColor(Color.BLUE);
+                AlertDialog.Builder builder = new AlertDialog.Builder(Ujian.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Ujian?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(Ujian.this, UjianBindo.class);
+                                startActivity(intent);
+                                buttonkimia.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
 
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 

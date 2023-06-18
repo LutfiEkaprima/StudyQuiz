@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                     editor.remove("quizCompleted");
                     editor.remove("ujianCompleted");
                     editor.remove("userAnswers");
+                    editor.remove("quizsejarahCompleted");
+                    editor.remove("ujianindoCompleted");
                     editor.remove("questionAnswered");
                     editor.apply();
 
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.remove("totalScore");
         editor.remove("nilai");
+        editor.remove("totalScoresejarah");
+        editor.remove("totalScoreindo");
         editor.apply();
     }
 
