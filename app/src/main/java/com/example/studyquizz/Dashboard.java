@@ -12,12 +12,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class Dashboard extends Fragment {
     ImageView imageView1;
     ImageView imageView2;
     ImageView imageView3;
+
+    TextView textpengembang;
 
     long exittime = 0;
 
@@ -36,6 +39,7 @@ public class Dashboard extends Fragment {
         imageView1 = (ImageView) view.findViewById(R.id.quiz);
         imageView2 = (ImageView) view.findViewById(R.id.ujian);
         imageView3 = (ImageView) view.findViewById(R.id.nilai);
+        textpengembang = (TextView) view.findViewById(R.id.pengembang);
 
         imageView1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +63,15 @@ public class Dashboard extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), Nilai.class);
+                startActivity(intent);
+
+            }
+        });
+
+        textpengembang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Pengembang.class);
                 startActivity(intent);
 
             }

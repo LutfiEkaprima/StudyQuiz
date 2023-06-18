@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pengembang"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Profil Pengembang Aplikasi"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/profil1"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/judul"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/ridwan">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namaprofil1"
+            android:layout_below="@id/judul"
+            android:layout_toEndOf="@id/profil1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ridhuan Rangga Kusuma"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/pm"
+            android:layout_below="@id/namaprofil1"
+            android:layout_toEndOf="@id/profil1"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text="Project Manager"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/email1"
+            android:layout_below="@id/pm"
+            android:layout_toEndOf="@id/profil1"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/gmail">
+        </ImageView>
+        <TextView
+            android:id="@+id/gmail1"
+            android:layout_below="@id/pm"
+            android:layout_toEndOf="@id/email1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:linksClickable="true"
+            android:textSize="13sp"
+            android:text="ridhuan@gmail.com">
+
+        </TextView>
+
+
+        <ImageView
+            android:id="@+id/profil2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/profil1"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/jojo">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namaprofil2"
+            android:layout_below="@id/profil1"
+            android:layout_toEndOf="@id/profil2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jonathan Natannael Zefanya"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/designer"
+            android:layout_below="@id/namaprofil2"
+            android:layout_toEndOf="@id/profil2"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text="Designer"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/email2"
+            android:layout_below="@id/designer"
+            android:layout_toEndOf="@id/profil2"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/gmail">
+        </ImageView>
+        <TextView
+            android:id="@+id/gmail2"
+            android:layout_below="@id/designer"
+            android:layout_toEndOf="@id/email2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:linksClickable="true"
+            android:text="jonathan.zefanya16@gmail.com"
+            android:textSize="13sp">
+        </TextView>
+
+
+        <ImageView
+            android:id="@+id/profil3"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/profil2"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/dafa">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namaprofil3"
+            android:layout_below="@id/profil2"
+            android:layout_toEndOf="@id/profil3"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daffa Nur Fakhri"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/analyst"
+            android:layout_below="@id/namaprofil3"
+            android:layout_toEndOf="@id/profil2"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text="Analyst"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/email3"
+            android:layout_below="@id/analyst"
+            android:layout_toEndOf="@id/profil3"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/gmail">
+        </ImageView>
+        <TextView
+            android:id="@+id/gmail3"
+            android:layout_below="@id/analyst"
+            android:layout_toEndOf="@id/email3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:linksClickable="true"
+            android:text="daffanur19@gmail.com"
+            android:textSize="13sp">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/profil4"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/profil3"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/lutfi">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namaprofil4"
+            android:layout_below="@id/profil3"
+            android:layout_toEndOf="@id/profil4"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lutfi Ekaprima Jannata"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/programmer"
+            android:layout_below="@id/namaprofil4"
+            android:layout_toEndOf="@id/profil2"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text="Programmer"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/email4"
+            android:layout_below="@id/programmer"
+            android:layout_toEndOf="@id/profil4"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/gmail">
+        </ImageView>
+        <TextView
+            android:id="@+id/gmail4"
+            android:layout_below="@id/programmer"
+            android:layout_toEndOf="@id/email4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/black"
+            android:linksClickable="true"
+            android:text="lutfiekj@gmail.com"
+            android:textSize="13sp">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/profil5"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@id/profil4"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/reja">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/namaprofil5"
+            android:layout_below="@id/profil4"
+            android:layout_toEndOf="@id/profil5"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="65dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Muhammad Fahreza"
+            android:textSize="18sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/dokumenter"
+            android:layout_below="@id/namaprofil5"
+            android:layout_toEndOf="@id/profil2"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:text="Dokumenter"
+            android:textColor="@color/black"
+            android:textSize="16sp">
+
+        </TextView>
+
+        <ImageView
+            android:id="@+id/email5"
+            android:layout_below="@id/dokumenter"
+            android:layout_toEndOf="@id/profil5"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/gmail">
+        </ImageView>
+        <TextView
+            android:id="@+id/gmail5"
+            android:layout_below="@id/dokumenter"
+            android:layout_toEndOf="@id/email5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            android:linksClickable="true"
+            android:text="muhammadfahreza0838@gmail.com"
+            android:textSize="13sp">
+        </TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1000dp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+</ScrollView>

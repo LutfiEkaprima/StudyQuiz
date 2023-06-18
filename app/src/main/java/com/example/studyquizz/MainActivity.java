@@ -37,25 +37,29 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String enteredUsername = usernamefl.getText().toString();
                 String enteredPassword = passwordfl.getText().toString();
-                String capitalizedUsername = enteredUsername.substring(0, 1).toUpperCase() + enteredUsername.substring(1);
 
-                if (userMap.containsKey(enteredUsername) && userMap.get(enteredUsername).equals(enteredPassword)) {
-                    SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.remove("quizCompleted");
-                    editor.remove("ujianCompleted");
-                    editor.remove("userAnswers");
-                    editor.remove("quizsejarahCompleted");
-                    editor.remove("ujianindoCompleted");
-                    editor.remove("questionAnswered");
-                    editor.apply();
-
-                    startActivity(new Intent(MainActivity.this, Menu.class));
-                    logbt.setBackgroundColor(Color.BLUE);
-                    Toast.makeText(MainActivity.this, "Selamat Datang " + capitalizedUsername, Toast.LENGTH_SHORT).show();
+                if (enteredUsername.isEmpty() || enteredPassword.isEmpty()) {
+                    Toast.makeText(MainActivity.this, "Username atau Password belum diisi", Toast.LENGTH_SHORT).show();
                 } else {
-                    logbt.setBackgroundColor(Color.RED);
-                    Toast.makeText(MainActivity.this, "Username atau Password Salah", Toast.LENGTH_SHORT).show();
+                    String capitalizedUsername = enteredUsername.substring(0, 1).toUpperCase() + enteredUsername.substring(1);
+                    if (userMap.containsKey(enteredUsername) && userMap.get(enteredUsername).equals(enteredPassword)) {
+                        SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove("quizCompleted");
+                        editor.remove("ujianCompleted");
+                        editor.remove("userAnswers");
+                        editor.remove("quizsejarahCompleted");
+                        editor.remove("ujianindoCompleted");
+                        editor.remove("questionAnswered");
+                        editor.apply();
+
+                        startActivity(new Intent(MainActivity.this, Menu.class));
+                        logbt.setBackgroundColor(Color.BLUE);
+                        Toast.makeText(MainActivity.this, "Selamat Datang " + capitalizedUsername, Toast.LENGTH_SHORT).show();
+                    } else {
+                        logbt.setBackgroundColor(Color.RED);
+                        Toast.makeText(MainActivity.this, "Username atau Password Salah", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
         });

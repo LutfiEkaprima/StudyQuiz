@@ -33,6 +33,22 @@
         android:background="@drawable/nilai">
     </ImageView>
 
+    <TextView
+        android:id="@+id/pengembang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nilai"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Pengambang Aplikasi"
+        android:textColor="@color/biru"
+        android:textSize="18sp">
+
+    </TextView>
+
 
 
 </RelativeLayout>
