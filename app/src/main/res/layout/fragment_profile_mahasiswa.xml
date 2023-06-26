@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".Profile">
+    tools:context=".profile_mahasiswa">
 
     <ImageView
         android:id="@+id/gender"
@@ -19,7 +19,7 @@
         android:id="@+id/namasiswa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DAFFA NUR FAKHRI"
+        android:text="RIDHUAN RANGGA KUSUMA"
         android:textAlignment="center"
         android:textSize="35sp"
         android:fontFamily="@font/podkova_semibold"
@@ -32,7 +32,7 @@
         android:layout_below="@id/namasiswa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="1152200"
+        android:text="115220025"
         android:textAlignment="center"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_regular"
@@ -44,7 +44,7 @@
         android:layout_below="@+id/noinduk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SMAN 17 KABUPATEN TANGERANG"
+        android:text="Insitut Teknologi Indonesia"
         android:textAlignment="center"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_regular"
@@ -65,7 +65,7 @@
         android:layout_below="@+id/asalsekolah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kelas"
+        android:text="Prodi"
         android:textSize="23sp"
         android:fontFamily="@font/poppins_light"
         android:textColor="@color/black"
@@ -78,7 +78,7 @@
         android:layout_below="@id/judul_jurusan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="X.1"
+        android:text="Teknik Informatika"
         android:textSize="23sp"
         android:fontFamily="@font/poppinsmedium"
         android:textColor="@color/black"

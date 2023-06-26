@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         userMap.put("admin", "1234");
         userMap.put("dafa", "1234");
+        userMap.put("ridhuan", "1234");
 
         EditText usernamefl = findViewById(R.id.usernamefl);
         EditText passwordfl = findViewById(R.id.passwordfl);
@@ -53,7 +54,10 @@ public class MainActivity extends AppCompatActivity {
                         editor.remove("questionAnswered");
                         editor.apply();
 
-                        startActivity(new Intent(MainActivity.this, Menu.class));
+                        Intent intent = new Intent(MainActivity.this, Menu.class);
+                        intent.putExtra("username", enteredUsername); // Mengirimkan username yang berhasil masuk ke Menu
+                        startActivity(intent);
+
                         logbt.setBackgroundColor(Color.BLUE);
                         Toast.makeText(MainActivity.this, "Selamat Datang " + capitalizedUsername, Toast.LENGTH_SHORT).show();
                     } else {
