@@ -11,31 +11,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/gendercwok"
+        android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginBottom="350dp">
+        android:layout_marginBottom="380dp">
     </ImageView>
 
     <TextView
         android:id="@+id/namasiswa"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="DAFFA NUR FAKHRI"
+        android:textAlignment="center"
         android:textSize="35sp"
         android:fontFamily="@font/podkova_semibold"
         android:textColor="@color/black"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="140dp">
     </TextView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/asalsekolah"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SMAN 1 GUNUNG SINDUR"
+        android:textAlignment="center"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_regular"
         android:textColor="@color/black"
-        android:layout_marginStart="70sp"
         android:layout_marginTop="190dp">
     </TextView>
 
