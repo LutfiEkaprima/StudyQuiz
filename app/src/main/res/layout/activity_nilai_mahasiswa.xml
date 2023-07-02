@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/jdl_nilai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NILAI MAHASISWA"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinsmedium">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/garis"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@+id/jdl_nilai"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_mtk2"
+            android:layout_below="@+id/garis"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MATEMATIKA 2"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scoremtk"
+            android:layout_below="@+id/jdl_mtk2"
+            android:layout_marginStart="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_mtk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_mtk2"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_mtk"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_mtkdisk"
+            android:layout_below="@+id/nilai_mtk"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MATEMATIKA DISKRIT"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scoredisk"
+            android:layout_below="@+id/jdl_mtkdisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_mtkdisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_mtkdisk"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_mtkdisk"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_kimia"
+            android:layout_below="@+id/nilai_mtkdisk"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STATISTIKA 2"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorekimia"
+            android:layout_below="@+id/jdl_kimia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_kimia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_kimia"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_kimia"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_bio"
+            android:layout_below="@+id/nilai_kimia"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DASAR ARSITEKTUR DAN ORGANISASI KOMPUTER"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorebio"
+            android:layout_below="@+id/jdl_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_bio"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_bio"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_eko"
+            android:layout_below="@+id/nilai_bio"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="INTERAKSI MANUSIA DAN KOMPUTER"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scoreeko"
+            android:layout_below="@+id/jdl_eko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_eko"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_eko"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/jdl_sjr"
+            android:layout_below="@+id/nilai_eko"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STRUKTUR DATA"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scoresjr"
+            android:layout_below="@+id/jdl_sjr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_eko"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/nilai_sjr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_sjr"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_sjr"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/jdl_pbo"
+            android:layout_below="@+id/nilai_sjr"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PEMROGRAMAN BERORIENTASI OBJECT"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppinssemibold"
+            android:textSize="25sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/text_view_total_scorepbo"
+            android:layout_below="@+id/jdl_pbo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Quiz"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/nilai_pbo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/Nilai_Ujian"
+            android:layout_below="@+id/jdl_pbo"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_below="@+id/nilai_pbo"
+            android:background="@drawable/minus">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nilai_pbo"
+            android:layout_marginTop="100dp">
+
+        </TextView>
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -36,11 +36,45 @@ public class QuizSejarah extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-            new Question("1. Berita menyerahnya Jepang dapat diketahui oleh seorang tokoh pemuda melalui ....", "A. pengumuman di koran-koran ", "B. radio BBC", "C.selebaran dari Sekutu", "D. berita televisi asing", "B. radio BBC", 0),
-            new Question("2. Kota Nagasaki dijatuhi bom atom oleh Sekutu pada tanggal ....", "A. 9 Agustus 1945", "B. 10 Agustus 1945", "C. 8 Agustus 1945", "D. 11 Agustus 1945", "A. 9 Agustus 1945", 0),
-            new Question("3. Jaminan yang diberikan kepada para pemuda di Rengasdengklok sehingga mereka sepakat untuk membawa Soekarno-Hatta kembali ke Jakarta adalah ....", "A. proklamasi akan disusun dalam sidang PPKI ", "B. pemerintah akan mewujudkan masyarakat adil dan makmur", "C. proklamasi akan dilaksanakan selambat-lambatnya tanggal 17 Agustus 1945", "D. para pemuda akan diikutsertakan dalam pemerintahan", "C. proklamasi akan dilaksanakan selambat-lambatnya tanggal 17 Agustus 1945", 0),
-            new Question("4. Latar belakang terjadinya Peristiwa Rengasdengklok adalah ....", "A. pertentangan antara para pemuda dengan golongan tua tentang proklamasi kemerdekaan ", "B. Adanya perintah dari Jepang", "C. para pemudaingin memproklamasikan kemerdekaan di Rengasdengklok", "D. para pemuda ingin memproklamasikan kemerdekaan Indonesia", "A. pertentangan antara para pemuda dengan golongan tua tentang proklamasi kemerdekaan ", 0),
-            new Question("5. Dalam kabinet pertama RI, menteri pengajaran dijabat oleh ....", "A. Ir.Soekarno ", "B. MR. Ahmad Soebardjo", "C. Muhammad Yamin", "D. Ki Hajar Dewantara", "D. Ki Hajar Dewantara", 0),
+            new Question("1. Berita menyerahnya Jepang dapat diketahui oleh seorang tokoh pemuda melalui ....",
+                    "A. pengumuman di koran-koran ",
+                    "B. radio BBC",
+                    "C.selebaran dari Sekutu",
+                    "D. berita televisi asing",
+                    "B. radio BBC",
+                    0),
+
+            new Question("2. Kota Nagasaki dijatuhi bom atom oleh Sekutu pada tanggal ....",
+                    "A. 9 Agustus 1945",
+                    "B. 10 Agustus 1945",
+                    "C. 8 Agustus 1945",
+                    "D. 11 Agustus 1945",
+                    "A. 9 Agustus 1945",
+                    0),
+
+            new Question("3. Jaminan yang diberikan kepada para pemuda di Rengasdengklok sehingga mereka sepakat untuk membawa Soekarno-Hatta kembali ke Jakarta adalah ....",
+                    "A. proklamasi akan disusun dalam sidang PPKI ",
+                    "B. pemerintah akan mewujudkan masyarakat adil dan makmur",
+                    "C. proklamasi akan dilaksanakan selambat-lambatnya tanggal 17 Agustus 1945",
+                    "D. para pemuda akan diikutsertakan dalam pemerintahan",
+                    "C. proklamasi akan dilaksanakan selambat-lambatnya tanggal 17 Agustus 1945",
+                    0),
+
+            new Question("4. Latar belakang terjadinya Peristiwa Rengasdengklok adalah ....",
+                    "A. pertentangan antara para pemuda dengan golongan tua tentang proklamasi kemerdekaan ",
+                    "B. Adanya perintah dari Jepang",
+                    "C. para pemudaingin memproklamasikan kemerdekaan di Rengasdengklok",
+                    "D. para pemuda ingin memproklamasikan kemerdekaan Indonesia",
+                    "A. pertentangan antara para pemuda dengan golongan tua tentang proklamasi kemerdekaan ",
+                    0),
+
+            new Question("5. Dalam kabinet pertama RI, menteri pengajaran dijabat oleh ....",
+                    "A. Ir.Soekarno ",
+                    "B. MR. Ahmad Soebardjo",
+                    "C. Muhammad Yamin",
+                    "D. Ki Hajar Dewantara",
+                    "D. Ki Hajar Dewantara",
+                    0),
     };
 
     private boolean quizsejarahCompleted;

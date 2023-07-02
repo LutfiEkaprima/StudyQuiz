@@ -47,7 +47,13 @@ public class MainActivity extends AppCompatActivity {
                         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         editor.remove("quizCompleted");
+                        editor.remove("quizpboCompleted");
+                        editor.remove("quizmtkCompleted");
+                        editor.remove("quizDiskritCompleted");
+                        editor.remove("ujianmtkCompleted");
+                        editor.remove("ujianpboCompleted");
                         editor.remove("ujianCompleted");
+                        editor.remove("ujiandiskritCompleted");
                         editor.remove("userAnswers");
                         editor.remove("quizsejarahCompleted");
                         editor.remove("ujianindoCompleted");
@@ -55,6 +61,11 @@ public class MainActivity extends AppCompatActivity {
                         editor.apply();
 
                         Intent intent = new Intent(MainActivity.this, Menu.class);
+                        if (enteredUsername.equals("ridhuan")) {
+                            intent = new Intent(MainActivity.this, MenuMahasiswa.class);
+                        } else {
+                            intent = new Intent(MainActivity.this, Menu.class);
+                        }
                         intent.putExtra("username", enteredUsername); // Mengirimkan username yang berhasil masuk ke Menu
                         startActivity(intent);
 
@@ -79,6 +90,12 @@ public class MainActivity extends AppCompatActivity {
         editor.remove("nilai");
         editor.remove("totalScoresejarah");
         editor.remove("totalScoreindo");
+        editor.remove("quizmtk");
+        editor.remove("ujianmtk");
+        editor.remove("quizdiskrit");
+        editor.remove("ujiandiskrit");
+        editor.remove("quizpbo");
+        editor.remove("ujianpbo");
         editor.apply();
     }
 

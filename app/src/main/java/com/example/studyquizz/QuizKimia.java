@@ -35,11 +35,47 @@ public class QuizKimia extends AppCompatActivity {
     private long timeLeftInMillis = 900000;
 
     Question[] questions = {
-            new Question("1. Perhatikan konfigurasi elektron di bawah ini!\n\nY : [Ne]3s23p5\n\nDari konfigurasi elektron di atas, dapat disimpulkan bahwa unsur Y berada pada","A. periode 3, golongan VIIA", "B. periode 3, golongan VIIB", "C. periode 3, golongan VA", "D. periode 5, golongan IIIA", "A. periode 3, golongan VIIA",0),
-            new Question("2. Perhatikan konfigurasi elektron berikut!\n\nP : 1s2 2s2 2p2\n\nQ : 1s2 2s2 2p6 3s2 3p5\n\nJika P dan Q membentuk senyawa PQ4, bentuk molekulnya adalah","A. tetrahedron", "B. segitiga piramida", "C. bengkok", "D. bentuk T","A. tetrahedron",0),
-            new Question("3. Perhatikan data uji pH dua buah air limbah berikut!\n\nDari hasil pengujian maka pH air limbah 1 dan limbah 2 berturut – turut adalah","A. pH ≤ 8,3 dan pH ≥ 10", "B. pH ≤ 4,2 dan pH ≥ 10", "C. 4,2 ≤ pH ≤ 8,3 dan pH ≥ 10", "D. 4,2 ≤ pH ≤ 6,0 dan 7,6 ≤ pH ≤ 10", "D. 4,2 ≤ pH ≤ 6,0 dan 7,6 ≤ pH ≤ 10", R.drawable.quiz3),
-            new Question("4. Untuk melakukan titrasi seperti gambar di atas, digunakan indikator","A. metil orange", "B. metil jingga", "C. phenolphtalein", "D. bromtimol biru", "C. phenolphtalein", R.drawable.quiz4),
-            new Question("5. Dari gambar di atas yang tergolong larutan elektrolit kuat adalah ","A. (1) dan (2)", "B. (1) dan (4)", "C. (2) dan (3)", "D. (3) dan (4)", "A. (1) dan (2)", R.drawable.quiz5)
+
+            new Question("1. Perhatikan konfigurasi elektron di bawah ini!\n\nY : [Ne]3s23p5\n\nDari konfigurasi elektron di atas, dapat disimpulkan bahwa unsur Y berada pada",
+                    "A. periode 3, golongan VIIA",
+                    "B. periode 3, golongan VIIB",
+                    "C. periode 3, golongan VA",
+                    "D. periode 5, golongan IIIA",
+                    "A. periode 3, golongan VIIA",
+                    0),
+
+            new Question("2. Perhatikan konfigurasi elektron berikut!\n\nP : 1s2 2s2 2p2\n\nQ : 1s2 2s2 2p6 3s2 3p5\n\nJika P dan Q membentuk senyawa PQ4, bentuk molekulnya adalah",
+                    "A. tetrahedron",
+                    "B. segitiga piramida",
+                    "C. bengkok",
+                    "D. bentuk T",
+                    "A. tetrahedron",
+                    0),
+
+            new Question("3. Perhatikan data uji pH dua buah air limbah berikut!\n\nDari hasil pengujian maka pH air limbah 1 dan limbah 2 berturut – turut adalah",
+                    "A. pH ≤ 8,3 dan pH ≥ 10",
+                    "B. pH ≤ 4,2 dan pH ≥ 10",
+                    "C. 4,2 ≤ pH ≤ 8,3 dan pH ≥ 10",
+                    "D. 4,2 ≤ pH ≤ 6,0 dan 7,6 ≤ pH ≤ 10",
+                    "D. 4,2 ≤ pH ≤ 6,0 dan 7,6 ≤ pH ≤ 10",
+                    R.drawable.quiz3),
+
+            new Question("4. Untuk melakukan titrasi seperti gambar di atas, digunakan indikator",
+                    "A. metil orange",
+                    "B. metil jingga",
+                    "C. phenolphtalein",
+                    "D. bromtimol biru",
+                    "C. phenolphtalein",
+                    R.drawable.quiz4),
+
+            new Question("5. Dari gambar di atas yang tergolong larutan elektrolit kuat adalah ",
+                    "A. (1) dan (2)",
+                    "B. (1) dan (4)",
+                    "C. (2) dan (3)",
+                    "D. (3) dan (4)",
+                    "A. (1) dan (2)",
+                    R.drawable.quiz5)
+
     };
 
     private boolean ujianCompleted;

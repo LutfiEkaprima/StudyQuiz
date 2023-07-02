@@ -36,15 +36,45 @@ public class UjianBindo extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-            new Question("1. Berikut ini yang tidak termasuk unsur-unsur dalam surat lamaran pekerjaan adalah ….","A. tanggal surat ", "B. alamat surat", "C. ucapan terimakasih", "D. isi surat", "C. ucapan terimakasih",0),
+            new Question("1. Berikut ini yang tidak termasuk unsur-unsur dalam surat lamaran pekerjaan adalah ….",
+                    "A. tanggal surat ",
+                    "B. alamat surat",
+                    "C. ucapan terimakasih",
+                    "D. isi surat",
+                    "C. ucapan terimakasih",
+                    0),
 
-            new Question("2. Langkah yang tepat untuk meyakinkan pendengar atas pendapat seseorang pembicara adalah ….","A. Tujuan jelas, mengemukakan fakta, tidak berbelit-belit (satu tema) ", "B. Tujuan jelas, menggunakan ilustrasi, wajah serius.", "C. Tujuan jelas, berwajah serius, berterus terang.", "D. Tujuan jelas, memakai kata-kata ilmiah, menggunakan teks.", "A. Tujuan jelas, mengemukakan fakta, tidak berbelit-belit (satu tema) ", 0),
+            new Question("2. Langkah yang tepat untuk meyakinkan pendengar atas pendapat seseorang pembicara adalah ….",
+                    "A. Tujuan jelas, mengemukakan fakta, tidak berbelit-belit (satu tema) ",
+                    "B. Tujuan jelas, menggunakan ilustrasi, wajah serius.",
+                    "C. Tujuan jelas, berwajah serius, berterus terang.",
+                    "D. Tujuan jelas, memakai kata-kata ilmiah, menggunakan teks.",
+                    "A. Tujuan jelas, mengemukakan fakta, tidak berbelit-belit (satu tema) ",
+                    0),
 
-            new Question("3. Karena pengaruh globalisasi dan tuntutan kehidupan, masyarakat akan mengalami pergeseran apresiasi dan cara pandang terhadap berbagai aspek kehidup. Berbagai aspek kehidupan itu sendiri juga mengalami perubahan-perubahan yang berarti. Untuk menjelaskan bagaimana pendidikan masa depan harus dilaksanakan, berbagai tuntutan kebutuhan dan fenomena yang terjadi dalam masyarakat perlu dicermati secara seksama. Berbagai tuntutan itulah nantinya akan memaksa dunia pendidikan untuk berbenah diri. Dunia kerja, misalnya, dapat dipastikan akan menuju kepada spesialisasi dan profesionalisasi.\n\n\t\t\t\tSementara itu, ada geseran apresiasi masarakat terhadap nilai-nilai kehidupan sehingga masyarakat menjadi longgar terhadap berperilaku yang kurang lazim dalam budaya Indonesia. Misalnya, mencium pipi antara dua insan yang berlainan jenis di remaja. Itu semua menjurus kepada penyimpangan norma agama. \n\nKutipan di atas menyatakan ….","A. fakta ", "B. pendapat", "C. analisi", "D. deskripsi", "A. fakta ", 0),
+            new Question("3. Karena pengaruh globalisasi dan tuntutan kehidupan, masyarakat akan mengalami pergeseran apresiasi dan cara pandang terhadap berbagai aspek kehidup. Berbagai aspek kehidupan itu sendiri juga mengalami perubahan-perubahan yang berarti. Untuk menjelaskan bagaimana pendidikan masa depan harus dilaksanakan, berbagai tuntutan kebutuhan dan fenomena yang terjadi dalam masyarakat perlu dicermati secara seksama. Berbagai tuntutan itulah nantinya akan memaksa dunia pendidikan untuk berbenah diri. Dunia kerja, misalnya, dapat dipastikan akan menuju kepada spesialisasi dan profesionalisasi.\n\n\t\t\t\tSementara itu, ada geseran apresiasi masarakat terhadap nilai-nilai kehidupan sehingga masyarakat menjadi longgar terhadap berperilaku yang kurang lazim dalam budaya Indonesia. Misalnya, mencium pipi antara dua insan yang berlainan jenis di remaja. Itu semua menjurus kepada penyimpangan norma agama. \n\nKutipan di atas menyatakan ….",
+                    "A. fakta ",
+                    "B. pendapat",
+                    "C. analisi",
+                    "D. deskripsi",
+                    "A. fakta ",
+                    0),
 
-            new Question("4. Bahasa laporan hendaknya tidak memenuhi kriteria berikut ….","A. logis ", "B. baku", "C. jelas", "D. rancu", "D. rancu", 0),
+            new Question("4. Bahasa laporan hendaknya tidak memenuhi kriteria berikut ….",
+                    "A. logis ",
+                    "B. baku",
+                    "C. jelas",
+                    "D. rancu",
+                    "D. rancu",
+                    0),
 
-            new Question("5. Bacalah teks berikut dengan seksama!\n\nSemburan Baru Muncul di Mindi Semburan lumpur, air, dan gas baru keluar dari halaman belakang rumah salah seorang penduduk warga Desa Mendi, Kecamatan Porong, Kabupaten Sidoarjo. Semburan ini merupakan semburan ke-59 yang muncul di sekitaran pusat semburan utama. Menurut seorang ahli dari Leader Team Frgaco, perusahaan yang mengawasi gas-gas berbahaya disekitar pusat semburan, semburan sama dengan 58 semburan liar sebelumnya. Semburan liar itu juga tidak berbahaya dan akan membesar. Kalau dibiarkan semburan itu akan mengecil sendiri. Untuk menutup semburan, hari ini akan dimasukkan 100 kilogram semen ke dalam lubang asal semburan.","A. Mengecilnya semburan liar ", "B. Pendapat tentang semburan liar", "C. Munculnya semburan liar", "D. Penutupan lubang semburan", "B. Pendapat tentang semburan liar", 0),
+            new Question("5. Bacalah teks berikut dengan seksama!\n\nSemburan Baru Muncul di Mindi Semburan lumpur, air, dan gas baru keluar dari halaman belakang rumah salah seorang penduduk warga Desa Mendi, Kecamatan Porong, Kabupaten Sidoarjo. Semburan ini merupakan semburan ke-59 yang muncul di sekitaran pusat semburan utama. Menurut seorang ahli dari Leader Team Frgaco, perusahaan yang mengawasi gas-gas berbahaya disekitar pusat semburan, semburan sama dengan 58 semburan liar sebelumnya. Semburan liar itu juga tidak berbahaya dan akan membesar. Kalau dibiarkan semburan itu akan mengecil sendiri. Untuk menutup semburan, hari ini akan dimasukkan 100 kilogram semen ke dalam lubang asal semburan.",
+                    "A. Mengecilnya semburan liar ",
+                    "B. Pendapat tentang semburan liar",
+                    "C. Munculnya semburan liar",
+                    "D. Penutupan lubang semburan",
+                    "B. Pendapat tentang semburan liar",
+                    0),
 
             };
 

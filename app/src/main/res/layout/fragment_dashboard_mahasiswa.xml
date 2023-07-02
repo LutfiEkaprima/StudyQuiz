@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboardlobby"
+    tools:context=".DashboardMahasiswa">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/quiz"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="250dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/quiz">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/ujian"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="380dp"
+            android:background="@drawable/ujian">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/nilai"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="510dp"
+            android:background="@drawable/nilai">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/pengembang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nilai"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Pengembang Aplikasi"
+            android:textColor="@color/biru"
+            android:textSize="18sp">
+
+        </TextView>
+    </RelativeLayout>
+
+</ScrollView>

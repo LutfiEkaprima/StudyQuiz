@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    android:background="@color/white"
+    tools:context=".UjianDiskrit">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="40dp"
+            android:text="Pertanyaan"
+            android:textColor="@color/black"/>
+
+        <ImageView
+            android:id="@+id/image_view_question"
+            android:layout_width="wrap_content"
+            android:layout_below="@+id/text_view_question"
+            android:layout_height="wrap_content"
+            android:visibility="invisible" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_view_question"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/radio_button_option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jawaban 1"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jawaban 2"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_option3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jawaban 3"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/radio_button_option4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jawaban 4"
+                android:textColor="@color/black"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="106dp"
+            android:layout_height="48dp"
+            android:text="Kembali"
+            android:layout_below="@id/radio_group_options"
+            android:layout_marginTop="16dp"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/button_next"
+            android:layout_width="110dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/radio_group_options"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="-1dp"
+            android:text="NEXT" />
+
+        <Button
+            android:id="@+id/button_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/radio_group_options"
+            android:layout_marginTop="16dp"
+            android:text="Submit"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_view_timer"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:text="15:00"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+
+    </RelativeLayout>
+
+</ScrollView>

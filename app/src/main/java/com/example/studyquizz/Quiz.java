@@ -36,11 +36,43 @@ public class Quiz extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-            new Question("1. Dua benda dengan massa yang sama dipasang pada ujung-ujung dari sebuah batang seperti pada gambar, Jika batang dalam kondisi setimbang dan poros dapat berputar, maka batang .... jika benda di sisi kanan didekatkan ke arah poros","A. akan berputar searah jarum jam ", "B. akan berputar berlawanan arah jarum jam", "C. tidak berputar", "D. tidak berputar", "B. akan berputar berlawanan arah jarum jam", R.drawable.image1),
-            new Question("2. Tiga buah pegas dengan konstanta pegas k = 600 N.m-1 disusun seri dan paralel seperti pada gambar, Jika ujung bawah susunan pegas diberi beban sebesar m = 2 kg, maka pertambahan panjang pegas adalah ...","A. 4 cm", "B. 5 cm", "C. 10 cm", "D. 0,5 cm","B. 5 cm",R.drawable.image2),
-            new Question("3. Seekor kuda bermassa 100 kg memakai sepatu yang ditempeli pegas identik pada keempat kakinya. Tekanan akibat berat badan kuda tersebut terdistribusi merata pada keempat kakinya. Ketika kuda berdiri dengan 4 kaki, pegas menjadi 2 cm lebih pendek. Perubahan panjang pegas jika kuda tersebut berdiri dengan dua kaki adalah ... cm","A. 2", "B. 2,5", "C. 3", "D. 4", "D. 4", 0),
-            new Question("4. Nilai konstanta elastisitas yang sama dari percobaan elastisitas karet ban pada tabel berikut adalah","A. (1) dan (2)", "B. (1) dan (4)", "C. (1) dan (5)", "D. (2) dan (3)", "B. (1) dan (4)", R.drawable.image4),
-            new Question("5. Sepotong kawat logam homogen dengan panjang 140 cm dan luas penampangnya 2 mm2 ketika ditarik dengan gaya sebesar 100 N bertambah panjang 1 mm. Modulus elastik bahan kawat logam tersebut adalah ... ","A. 7 x 108 N/m3", "B. 7 x 109 N/m3", "C. 7 x 1010 N/m3", "D. 7 x 1011 N/m3", "C. 7 x 1010 N/m3", 0)
+            new Question("1. Dua benda dengan massa yang sama dipasang pada ujung-ujung dari sebuah batang seperti pada gambar, Jika batang dalam kondisi setimbang dan poros dapat berputar, maka batang .... jika benda di sisi kanan didekatkan ke arah poros",
+                    "A. akan berputar searah jarum jam ",
+                    "B. akan berputar berlawanan arah jarum jam",
+                    "C. tidak berputar", "D. tidak berputar",
+                    "B. akan berputar berlawanan arah jarum jam",
+                    R.drawable.image1),
+
+            new Question("2. Tiga buah pegas dengan konstanta pegas k = 600 N.m-1 disusun seri dan paralel seperti pada gambar, Jika ujung bawah susunan pegas diberi beban sebesar m = 2 kg, maka pertambahan panjang pegas adalah ...",
+                    "A. 4 cm",
+                    "B. 5 cm",
+                    "C. 10 cm",
+                    "D. 0,5 cm",
+                    "B. 5 cm",
+                    R.drawable.image2),
+
+            new Question("3. Seekor kuda bermassa 100 kg memakai sepatu yang ditempeli pegas identik pada keempat kakinya. Tekanan akibat berat badan kuda tersebut terdistribusi merata pada keempat kakinya. Ketika kuda berdiri dengan 4 kaki, pegas menjadi 2 cm lebih pendek. Perubahan panjang pegas jika kuda tersebut berdiri dengan dua kaki adalah ... cm",
+                    "A. 2",
+                    "B. 2,5",
+                    "C. 3", "D. 4",
+                    "D. 4",
+                    0),
+
+            new Question("4. Nilai konstanta elastisitas yang sama dari percobaan elastisitas karet ban pada tabel berikut adalah",
+                    "A. (1) dan (2)",
+                    "B. (1) dan (4)",
+                    "C. (1) dan (5)",
+                    "D. (2) dan (3)",
+                    "B. (1) dan (4)",
+                    R.drawable.image4),
+
+            new Question("5. Sepotong kawat logam homogen dengan panjang 140 cm dan luas penampangnya 2 mm2 ketika ditarik dengan gaya sebesar 100 N bertambah panjang 1 mm. Modulus elastik bahan kawat logam tersebut adalah ... ",
+                    "A. 7 x 108 N/m3",
+                    "B. 7 x 109 N/m3",
+                    "C. 7 x 1010 N/m3",
+                    "D. 7 x 1011 N/m3",
+                    "C. 7 x 1010 N/m3",
+                    0)
     };
 
 

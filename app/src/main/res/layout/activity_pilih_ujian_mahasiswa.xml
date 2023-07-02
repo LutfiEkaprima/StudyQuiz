@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:backgroundTint="@color/white"
+    tools:context=".PilihUjianMahasiswa">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="UJIAN"
+            android:textSize="30dp"
+            android:fontFamily="@font/poppinssemibold"
+            android:textColor="@color/black">
+
+        </TextView>
+
+        <Button
+            android:id="@+id/mtk2"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:backgroundTint="@color/kuning"
+            android:text="MATEMATIKA 2"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="30sp">
+
+        </Button>
+
+        <Button
+            android:id="@+id/mtkdiskrit"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="MTK. DISKRIT"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/stk2"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="260dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="STATISTIKA 2"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/aorkom"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="340dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="AORKOM"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/imk"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="420dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="IMK"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/strukdat"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="500dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="STRUKTUR DATA"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+        <Button
+            android:id="@+id/pbo"
+            android:layout_width="400dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="580dp"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/kuning"
+            android:textColor="@color/black"
+            android:text="PBO"
+            android:textAlignment="center"
+            android:textSize="30sp">
+        </Button>
+
+
+    </RelativeLayout>
+</ScrollView>

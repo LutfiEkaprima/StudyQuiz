@@ -17,9 +17,6 @@ public class Menu extends AppCompatActivity implements NavigationBarView.OnItemS
     private Jadwal jadwal = new Jadwal();
     private Profile profile = new Profile();
 
-    private profile_mahasiswa profilemahasiswa = new profile_mahasiswa();
-
-    private String loggedInUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,16 +26,13 @@ public class Menu extends AppCompatActivity implements NavigationBarView.OnItemS
         bottomNavigationView = findViewById(R.id.navigation);
         bottomNavigationView.setOnItemSelectedListener(this);
 
-        // Set Dashboard sebagai halaman pertama yang terbuka
+
         getSupportFragmentManager().beginTransaction().replace(R.id.frlayout, dashboard).commit();
     }
 
-
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        loggedInUser = getIntent().getStringExtra("username");
-
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.dashboard:
                 getSupportFragmentManager().beginTransaction().replace(R.id.frlayout, dashboard).commit();
                 return true;
@@ -46,13 +40,10 @@ public class Menu extends AppCompatActivity implements NavigationBarView.OnItemS
                 getSupportFragmentManager().beginTransaction().replace(R.id.frlayout, jadwal).commit();
                 return true;
             case R.id.profile:
-                if (loggedInUser.equals("ridhuan")) {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frlayout, profilemahasiswa).commit();
-                } else {
-                    getSupportFragmentManager().beginTransaction().replace(R.id.frlayout, profile).commit();
-                }
+                getSupportFragmentManager().beginTransaction().replace(R.id.frlayout, profile).commit();
                 return true;
         }
         return false;
     }
+
 }
