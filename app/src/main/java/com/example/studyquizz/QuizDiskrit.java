@@ -73,7 +73,8 @@ public class QuizDiskrit extends AppCompatActivity {
                     "A. 13/50 ",
                     "B. 3/50 ",
                     "C. 33/50 ",
-                    "D. 23/50 ", "D. 23/50 ",
+                    "D. 23/50 ",
+                    "D. 23/50 ",
                     0),
     };
 

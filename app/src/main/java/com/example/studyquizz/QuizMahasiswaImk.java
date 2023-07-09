@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizSiswaEkonomi extends AppCompatActivity {
+public class QuizMahasiswaImk extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -36,49 +36,50 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-
-            new Question("1. Apa yang dimaksud dengan inflasi dalam ekonomi?",
-                    "A. Penurunan harga barang dan jasa secara umum",
-                    "B. Kenaikan nilai tukar mata uang",
-                    "C. Kenaikan harga barang dan jasa secara umum",
-                    "D. Penurunan tingkat pengangguran",
-                    "C. Kenaikan harga barang dan jasa secara umum",
+            new Question("1. Apa yang dimaksud dengan HCI (Human-Computer Interaction)?",
+                    "A. Studi tentang interaksi antara manusia dan komputer",
+                    "B. Proses pembuatan antarmuka pengguna",
+                    "C. Perancangan aplikasi berbasis web",
+                    "D. Keamanan dalam sistem komputer",
+                    "A. Studi tentang interaksi antara manusia dan komputer",
                     0),
 
-            new Question("2. Apa yang dimaksud dengan pasar oligopoli dalam teori ekonomi?",
-                    "A. Pasar yang dikuasai oleh satu produsen",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
-                    "C. Pasar yang dikuasai oleh banyak produsen kecil",
-                    "D. Pasar yang tidak memiliki persaingan",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
+            new Question("2. Apa tujuan utama dari HCI?",
+                    "A. Meningkatkan performa komputer",
+                    "B. Meningkatkan keamanan sistem komputer",
+                    "C. Meningkatkan efisiensi penggunaan sumber daya komputer",
+                    "D. Meningkatkan kepuasan pengguna dalam berinteraksi dengan komputer",
+                    "D. Meningkatkan kepuasan pengguna dalam berinteraksi dengan komputer",
                     0),
 
-            new Question("3. Apa yang dimaksud dengan GDP (Gross Domestic Product) dalam ekonomi?",
-                    "A. Total nilai ekspor suatu negara",
-                    "B. Total nilai impor suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
-                    "D. Total pendapatan masyarakat dalam suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
+            new Question("3. Faktor apa yang perlu dipertimbangkan dalam desain antarmuka pengguna?",
+                    "A. Kesederhanaan",
+                    "B. Konsistensi",
+                    "C. Responsivitas",
+                    "D. Semua jawaban benar",
+                    "D. Semua jawaban benar",
                     0),
 
-            new Question("4. Apa yang dimaksud dengan defisit anggaran dalam keuangan negara?",
-                    "A. Kelebihan pendapatan pemerintah dari total pengeluaran",
-                    "B. Kekurangan pendapatan pemerintah dari total pengeluaran",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
-                    "D. Kekurangan pengeluaran pemerintah dari total pendapatan",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
+            new Question("4. Apa yang dimaksud dengan affordance dalam konteks HCI?",
+                    "A. Kemampuan pengguna untuk menggunakan antarmuka pengguna",
+                    "B. Kemampuan sistem untuk merespons input pengguna",
+                    "C. Kemampuan objek untuk memberikan petunjuk penggunaan",
+                    "D. Kemampuan pengguna untuk belajar menggunakan aplikasi",
+                    "C. Kemampuan objek untuk memberikan petunjuk penggunaan",
                     0),
 
-            new Question("5. Apa yang dimaksud dengan konsep penawaran dan permintaan dalam ekonomi?",
-                    "A. Hubungan antara jumlah uang yang beredar dan tingkat inflasi",
-                    "B. Hubungan antara harga barang dan jumlah uang yang beredar",
-                    "C. Hubungan antara jumlah produksi dan tingkat konsumsi",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                   0),
+            new Question("5. Apa yang dimaksud dengan usability dalam HCI?",
+                    "A. Kemudahan penggunaan antarmuka pengguna",
+                    "B. Kualitas grafis pada antarmuka pengguna",
+                    "C. Keamanan sistem komputer",
+                    "D. Efisiensi penggunaan sumber daya komputer",
+                    "A. Kemudahan penggunaan antarmuka pengguna",
+                    0)
 
     };
-    private boolean quizekonomi;
+
+
+    private boolean quizimk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +97,11 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizekonomi = sharedPreferences.getBoolean("quizekonomi", false);
+        quizimk = sharedPreferences.getBoolean("quizimk", false);
 
-        if (quizekonomi) {
-            Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
-            Toast.makeText(QuizSiswaEkonomi.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizimk) {
+            Intent intent = new Intent(QuizMahasiswaImk.this, MenuMahasiswa.class);
+            Toast.makeText(QuizMahasiswaImk.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +205,12 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("nilaiquizekonomi", score);
-        editor.putBoolean("quizekonomi", true);
+        editor.putInt("nilaiquizimk", score);
+        editor.putBoolean("quizimk", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
+        Intent intent = new Intent(QuizMahasiswaImk.this, MenuMahasiswa.class);
         startActivity(intent);
         finish();
     }

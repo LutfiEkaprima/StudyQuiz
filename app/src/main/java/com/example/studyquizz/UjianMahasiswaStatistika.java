@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizSiswaEkonomi extends AppCompatActivity {
+public class UjianMahasiswaStatistika extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -36,49 +36,50 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-
-            new Question("1. Apa yang dimaksud dengan inflasi dalam ekonomi?",
-                    "A. Penurunan harga barang dan jasa secara umum",
-                    "B. Kenaikan nilai tukar mata uang",
-                    "C. Kenaikan harga barang dan jasa secara umum",
-                    "D. Penurunan tingkat pengangguran",
-                    "C. Kenaikan harga barang dan jasa secara umum",
+            new Question("1. Sebuah perusahaan ingin mengetahui rata-rata pengeluaran bulanan dari karyawan di departemen mereka. Dari populasi 500 karyawan, mereka mengambil sampel acak sederhana sebanyak 50 karyawan. Setelah menghitung, diperoleh rata-rata pengeluaran bulanan sebesar $1,200 dengan simpangan baku sebesar $200. Berapa estimasi rata-rata pengeluaran bulanan untuk seluruh karyawan di perusahaan dengan tingkat kepercayaan 95%?",
+                    "A. $1,180",
+                    "B. $1,200",
+                    "C. $1,220",
+                    "D. $1,240",
+                    "C. $1,220",
                     0),
 
-            new Question("2. Apa yang dimaksud dengan pasar oligopoli dalam teori ekonomi?",
-                    "A. Pasar yang dikuasai oleh satu produsen",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
-                    "C. Pasar yang dikuasai oleh banyak produsen kecil",
-                    "D. Pasar yang tidak memiliki persaingan",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
+            new Question("2. Sebuah toko pakaian ingin mengetahui apakah terdapat perbedaan signifikan dalam tingkat kepuasan pelanggan terhadap dua merek pakaian yang mereka jual. Merek A memiliki 100 responden dengan tingkat kepuasan rata-rata 4.2 dan simpangan baku 0.6, sedangkan merek B memiliki 120 responden dengan tingkat kepuasan rata-rata 4.6 dan simpangan baku 0.8. Dengan tingkat signifikansi 0.05, apakah terdapat perbedaan signifikan dalam tingkat kepuasan pelanggan antara kedua merek pakaian?",
+                    "A. Tidak ada perbedaan signifikan",
+                    "B. Terdapat perbedaan signifikan",
+                    "C. Tidak dapat ditentukan",
+                    "D. Tidak ada informasi yang cukup",
+                    "B. Terdapat perbedaan signifikan",
                     0),
 
-            new Question("3. Apa yang dimaksud dengan GDP (Gross Domestic Product) dalam ekonomi?",
-                    "A. Total nilai ekspor suatu negara",
-                    "B. Total nilai impor suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
-                    "D. Total pendapatan masyarakat dalam suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
+            new Question("3. Seorang peneliti ingin mengetahui apakah terdapat korelasi antara tingkat pendidikan dan pendapatan per tahun. Dari 200 responden yang diambil, diperoleh koefisien korelasi Pearson sebesar 0.72 dengan tingkat signifikansi 0.01. Berdasarkan hasil ini, apa kesimpulan yang dapat diambil?",
+                    "A. Terdapat korelasi positif yang signifikan antara tingkat pendidikan dan pendapatan",
+                    "B. Terdapat korelasi negatif yang signifikan antara tingkat pendidikan dan pendapatan",
+                    "C. Tidak terdapat korelasi yang signifikan antara tingkat pendidikan dan pendapatan",
+                    "D. Tidak dapat ditentukan",
+                    "A. Terdapat korelasi positif yang signifikan antara tingkat pendidikan dan pendapatan",
                     0),
 
-            new Question("4. Apa yang dimaksud dengan defisit anggaran dalam keuangan negara?",
-                    "A. Kelebihan pendapatan pemerintah dari total pengeluaran",
-                    "B. Kekurangan pendapatan pemerintah dari total pengeluaran",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
-                    "D. Kekurangan pengeluaran pemerintah dari total pendapatan",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
-                    0),
-
-            new Question("5. Apa yang dimaksud dengan konsep penawaran dan permintaan dalam ekonomi?",
-                    "A. Hubungan antara jumlah uang yang beredar dan tingkat inflasi",
-                    "B. Hubungan antara harga barang dan jumlah uang yang beredar",
-                    "C. Hubungan antara jumlah produksi dan tingkat konsumsi",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
+            new Question("4. Sebuah perusahaan teknologi ingin menguji apakah rata-rata umur baterai pada dua model smartphone yang mereka produksi sama. Dari sampel acak sederhana sebanyak 100 baterai pada masing-masing model, diperoleh rata-rata umur baterai model A sebesar 18 jam dengan simpangan baku 2 jam, sedangkan rata-rata umur baterai model B sebesar 17 jam dengan simpangan baku 2.5 jam. Dengan tingkat signifikansi 0.05, apakah terdapat perbedaan signifikan dalam rata-rata umur baterai antara kedua model smartphone?",
+                    "A. Tidak ada perbedaan signifikan",
+                    "B. Terdapat perbedaan signifikan",
+                    "C. Tidak dapat ditentukan",
+                    "D. Tidak ada informasi yang cukup",
+                    "B. Terdapat perbedaan signifikan",
                    0),
 
+            new Question("5. Sebuah penelitian ingin menguji apakah terdapat perbedaan signifikan dalam performa belajar antara dua kelompok siswa yang diajar dengan dua metode pengajaran yang berbeda. Dari sampel acak sebanyak 80 siswa pada masing-masing kelompok, diperoleh rata-rata nilai kelompok A sebesar 85 dengan simpangan baku 6, sedangkan rata-rata nilai kelompok B sebesar 82 dengan simpangan baku 5. Dengan tingkat signifikansi 0.01, apakah terdapat perbedaan signifikan dalam performa belajar antara kedua kelompok siswa?",
+                    "A. Tidak ada perbedaan signifikan",
+                    "B. Terdapat perbedaan signifikan",
+                    "C. Tidak dapat ditentukan",
+                    "D. Tidak ada informasi yang cukup",
+                    "B. Terdapat perbedaan signifikan",
+                    0)
+
+
     };
-    private boolean quizekonomi;
+
+    private boolean ujianstatistika;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +97,11 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizekonomi = sharedPreferences.getBoolean("quizekonomi", false);
+        ujianstatistika = sharedPreferences.getBoolean("ujianstatistika", false);
 
-        if (quizekonomi) {
-            Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
-            Toast.makeText(QuizSiswaEkonomi.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (ujianstatistika) {
+            Intent intent = new Intent(UjianMahasiswaStatistika.this, MenuMahasiswa.class);
+            Toast.makeText(UjianMahasiswaStatistika.this, "Anda Telah Melakukan Ujian", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +205,12 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("nilaiquizekonomi", score);
-        editor.putBoolean("quizekonomi", true);
+        editor.putInt("nilaiujianstatistika", score);
+        editor.putBoolean("ujianstatistika", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
+        Intent intent = new Intent(UjianMahasiswaStatistika.this, MenuMahasiswa.class);
         startActivity(intent);
         finish();
     }

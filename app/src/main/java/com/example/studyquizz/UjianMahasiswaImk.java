@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizSiswaEkonomi extends AppCompatActivity {
+public class UjianMahasiswaImk extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -36,49 +36,49 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
+        new Question("1. Apa yang dimaksud dengan interaksi manusia dan komputer?",
+                "A. Studi tentang manusia dan komputer",
+                "B. Penggunaan komputer oleh manusia",
+                "C. Pertukaran informasi antara manusia dan komputer",
+                "D. Proses komunikasi antara manusia dan komputer",
+                "C. Pertukaran informasi antara manusia dan komputer",
+                0),
 
-            new Question("1. Apa yang dimaksud dengan inflasi dalam ekonomi?",
-                    "A. Penurunan harga barang dan jasa secara umum",
-                    "B. Kenaikan nilai tukar mata uang",
-                    "C. Kenaikan harga barang dan jasa secara umum",
-                    "D. Penurunan tingkat pengangguran",
-                    "C. Kenaikan harga barang dan jasa secara umum",
-                    0),
+                new Question("2. Apa tujuan dari desain interaksi manusia dan komputer yang baik?",
+                        "A. Meningkatkan kecepatan komputasi",
+                        "B. Mengurangi biaya pengembangan perangkat lunak",
+                        "C. Memudahkan pengguna dalam menggunakan komputer",
+                        "D. Menyederhanakan tugas-tugas komputasi",
+                        "C. Memudahkan pengguna dalam menggunakan komputer",
+                        0),
 
-            new Question("2. Apa yang dimaksud dengan pasar oligopoli dalam teori ekonomi?",
-                    "A. Pasar yang dikuasai oleh satu produsen",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
-                    "C. Pasar yang dikuasai oleh banyak produsen kecil",
-                    "D. Pasar yang tidak memiliki persaingan",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
-                    0),
+                new Question("3. Metode pengumpulan data yang digunakan dalam evaluasi interaksi manusia dan komputer adalah...",
+                        "A. Observasi",
+                        "B. Wawancara",
+                        "C. Kuesioner",
+                        "D. Semua jawaban benar",
+                        "D. Semua jawaban benar",
+                        0),
 
-            new Question("3. Apa yang dimaksud dengan GDP (Gross Domestic Product) dalam ekonomi?",
-                    "A. Total nilai ekspor suatu negara",
-                    "B. Total nilai impor suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
-                    "D. Total pendapatan masyarakat dalam suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
-                    0),
+                new Question("4. Prinsip yang harus diperhatikan dalam desain antarmuka pengguna adalah...",
+                        "A. Kesederhanaan",
+                        "B. Konsistensi",
+                        "C. Keterbacaan",
+                        "D. Semua jawaban benar",
+                        "D. Semua jawaban benar",
+                        0),
 
-            new Question("4. Apa yang dimaksud dengan defisit anggaran dalam keuangan negara?",
-                    "A. Kelebihan pendapatan pemerintah dari total pengeluaran",
-                    "B. Kekurangan pendapatan pemerintah dari total pengeluaran",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
-                    "D. Kekurangan pengeluaran pemerintah dari total pendapatan",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
-                    0),
-
-            new Question("5. Apa yang dimaksud dengan konsep penawaran dan permintaan dalam ekonomi?",
-                    "A. Hubungan antara jumlah uang yang beredar dan tingkat inflasi",
-                    "B. Hubungan antara harga barang dan jumlah uang yang beredar",
-                    "C. Hubungan antara jumlah produksi dan tingkat konsumsi",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                   0),
+                new Question("5. Apa yang dimaksud dengan affordance dalam konteks interaksi manusia dan komputer?",
+                        "A. Kesesuaian antarmuka dengan tugas pengguna",
+                        "B. Kemampuan pengguna untuk menggunakan antarmuka",
+                        "C. Kemudahan penggunaan antarmuka",
+                        "D. Persepsi pengguna terhadap antarmuka",
+                        "B. Kemampuan pengguna untuk menggunakan antarmuka",
+                        0),
 
     };
-    private boolean quizekonomi;
+
+    private boolean ujianimk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +96,11 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizekonomi = sharedPreferences.getBoolean("quizekonomi", false);
+        ujianimk = sharedPreferences.getBoolean("ujianimk", false);
 
-        if (quizekonomi) {
-            Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
-            Toast.makeText(QuizSiswaEkonomi.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (ujianimk) {
+            Intent intent = new Intent(UjianMahasiswaImk.this, MenuMahasiswa.class);
+            Toast.makeText(UjianMahasiswaImk.this, "Anda Telah Melakukan Ujian", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +204,12 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("nilaiquizekonomi", score);
-        editor.putBoolean("quizekonomi", true);
+        editor.putInt("nilaiujianimk", score);
+        editor.putBoolean("ujianimk", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
+        Intent intent = new Intent(UjianMahasiswaImk.this, MenuMahasiswa.class);
         startActivity(intent);
         finish();
     }

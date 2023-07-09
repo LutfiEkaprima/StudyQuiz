@@ -78,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
                         editor.remove("ujianpkn");
                         editor.remove("ujiansbk");
                         editor.remove("ujiansejarah");
+                        editor.remove("quizaorkom");
+                        editor.remove("quizimk");
+                        editor.remove("quizstatistika");
+                        editor.remove("quizstrukdat");
+                        editor.remove("ujianaorkom");
+                        editor.remove("ujianimk");
+                        editor.remove("ujianstatistika");
+                        editor.remove("ujianstrukdat");
                         editor.apply();
 
                         Intent intent = new Intent(MainActivity.this, Menu.class);
@@ -136,6 +144,14 @@ public class MainActivity extends AppCompatActivity {
         editor.remove("nilaiujianpkn");
         editor.remove("nilaiujiansbk");
         editor.remove("nilaiujiansejarah");
+        editor.remove("nilaiquizaorkom");
+        editor.remove("nilaiquizimk");
+        editor.remove("nilaiquizstatistika");
+        editor.remove("nilaiquizstrukdat");
+        editor.remove("nilaiujianaorkom");
+        editor.remove("nilaiujianimk");
+        editor.remove("nilaiujianstatistika");
+        editor.remove("nilaiujianstrukdat");
         editor.apply();
     }
 

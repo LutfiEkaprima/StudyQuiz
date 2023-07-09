@@ -12,6 +12,30 @@
         android:theme="@style/Theme.StudyQuizz"
         tools:targetApi="31">
         <activity
+            android:name=".UjianMahasiswaStrukdat"
+            android:exported="false" />
+        <activity
+            android:name=".UjianMahasiswaStatistika"
+            android:exported="false" />
+        <activity
+            android:name=".UjianMahasiswaImk"
+            android:exported="false" />
+        <activity
+            android:name=".UjianMahasiswaAorkom"
+            android:exported="false" />
+        <activity
+            android:name=".QuizMahasiswaStrukdat"
+            android:exported="false" />
+        <activity
+            android:name=".QuizMahasiswaStatistika"
+            android:exported="false" />
+        <activity
+            android:name=".QuizMahasiswaImk"
+            android:exported="false" />
+        <activity
+            android:name=".QuizMahasiswaAorkom"
+            android:exported="false" />
+        <activity
             android:name=".UjianSiswaPkn"
             android:exported="false" />
         <activity

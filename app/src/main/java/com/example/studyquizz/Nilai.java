@@ -61,7 +61,7 @@ public class Nilai extends AppCompatActivity {
         int ujianfisika = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilaiujianfisika", 0);
         int ujianmtk = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilaiujianmtk", 0);
         int ujianpjok = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilaiujianpjok", 0);
-        int ujianpkn = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilaiujianpn", 0);
+        int ujianpkn = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilaiujianpkn", 0);
         int ujiansbk = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilaiujiansbk", 0);
         int ujiansejarah = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("nilaiujiansejarah", 0);
 

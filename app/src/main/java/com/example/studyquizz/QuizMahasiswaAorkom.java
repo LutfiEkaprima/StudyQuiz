@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizSiswaEkonomi extends AppCompatActivity {
+public class QuizMahasiswaAorkom extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -36,49 +36,51 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-
-            new Question("1. Apa yang dimaksud dengan inflasi dalam ekonomi?",
-                    "A. Penurunan harga barang dan jasa secara umum",
-                    "B. Kenaikan nilai tukar mata uang",
-                    "C. Kenaikan harga barang dan jasa secara umum",
-                    "D. Penurunan tingkat pengangguran",
-                    "C. Kenaikan harga barang dan jasa secara umum",
+            new Question("1. Apa yang dimaksud dengan arsitektur komputer?",
+                    "A. Desain perangkat keras komputer",
+                    "B. Perangkat lunak yang menjalankan komputer",
+                    "C. Algoritma dan struktur data dalam komputer",
+                    "D. Cara kerja sistem operasi",
+                    "A. Desain perangkat keras komputer",
                     0),
 
-            new Question("2. Apa yang dimaksud dengan pasar oligopoli dalam teori ekonomi?",
-                    "A. Pasar yang dikuasai oleh satu produsen",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
-                    "C. Pasar yang dikuasai oleh banyak produsen kecil",
-                    "D. Pasar yang tidak memiliki persaingan",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
+            new Question("2. Apa yang termasuk dalam komponen utama arsitektur komputer?",
+                    "A. CPU dan RAM",
+                    "B. Monitor dan keyboard",
+                    "C. Hard disk dan printer",
+                    "D. Semua jawaban benar",
+                    "A. CPU dan RAM",
                     0),
 
-            new Question("3. Apa yang dimaksud dengan GDP (Gross Domestic Product) dalam ekonomi?",
-                    "A. Total nilai ekspor suatu negara",
-                    "B. Total nilai impor suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
-                    "D. Total pendapatan masyarakat dalam suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
+            new Question("3. Apa yang dimaksud dengan von Neumann architecture?",
+                    "A. Arsitektur komputer yang menggunakan pipelining",
+                    "B. Arsitektur komputer yang memiliki banyak level cache",
+                    "C. Arsitektur komputer yang menggunakan memori berbasi register",
+                    "D. Arsitektur komputer dengan pemisahan antara memori dan unit kontrol",
+                    "D. Arsitektur komputer dengan pemisahan antara memori dan unit kontrol",
                     0),
 
-            new Question("4. Apa yang dimaksud dengan defisit anggaran dalam keuangan negara?",
-                    "A. Kelebihan pendapatan pemerintah dari total pengeluaran",
-                    "B. Kekurangan pendapatan pemerintah dari total pengeluaran",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
-                    "D. Kekurangan pengeluaran pemerintah dari total pendapatan",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
+            new Question("4. Apa fungsi dari unit aritmetika dan logika (ALU) dalam CPU?",
+                    "A. Menyimpan instruksi dan data",
+                    "B. Mengolah instruksi dan data",
+                    "C. Mengatur akses ke memori",
+                    "D. Mengirim dan menerima data dari perangkat luar",
+                    "B. Mengolah instruksi dan data",
                     0),
 
-            new Question("5. Apa yang dimaksud dengan konsep penawaran dan permintaan dalam ekonomi?",
-                    "A. Hubungan antara jumlah uang yang beredar dan tingkat inflasi",
-                    "B. Hubungan antara harga barang dan jumlah uang yang beredar",
-                    "C. Hubungan antara jumlah produksi dan tingkat konsumsi",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                   0),
+            new Question("5. Apa yang dimaksud dengan bus dalam arsitektur komputer?",
+                    "A. Rute pengiriman data antara komponen komputer",
+                    "B. Sistem operasi yang mengontrol komputer",
+                    "C. Alat untuk menghubungkan komputer dengan jaringan",
+                    "D. Semua jawaban benar",
+                    "A. Rute pengiriman data antara komponen komputer",
+                    0)
+
 
     };
-    private boolean quizekonomi;
+
+
+    private boolean quizaorkom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +98,11 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizekonomi = sharedPreferences.getBoolean("quizekonomi", false);
+        quizaorkom = sharedPreferences.getBoolean("quizaorkom", false);
 
-        if (quizekonomi) {
-            Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
-            Toast.makeText(QuizSiswaEkonomi.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizaorkom) {
+            Intent intent = new Intent(QuizMahasiswaAorkom.this, MenuMahasiswa.class);
+            Toast.makeText(QuizMahasiswaAorkom.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +206,12 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("nilaiquizekonomi", score);
-        editor.putBoolean("quizekonomi", true);
+        editor.putInt("nilaiquizaorkom", score);
+        editor.putBoolean("quizaorkom", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
+        Intent intent = new Intent(QuizMahasiswaAorkom.this, MenuMahasiswa.class);
         startActivity(intent);
         finish();
     }

@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizSiswaEkonomi extends AppCompatActivity {
+public class QuizMahasiswaStrukdat extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,51 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Apa yang dimaksud dengan inflasi dalam ekonomi?",
-                    "A. Penurunan harga barang dan jasa secara umum",
-                    "B. Kenaikan nilai tukar mata uang",
-                    "C. Kenaikan harga barang dan jasa secara umum",
-                    "D. Penurunan tingkat pengangguran",
-                    "C. Kenaikan harga barang dan jasa secara umum",
+            new Question("1. Apa yang dimaksud dengan struktur data dalam pemrograman?",
+                    "A. Metode pengorganisasian data dalam komputer",
+                    "B. Jenis bahasa pemrograman yang digunakan",
+                    "C. Algoritma untuk mengelola data",
+                    "D. Cara memformat kode program",
+                    "A. Metode pengorganisasian data dalam komputer",
                     0),
 
-            new Question("2. Apa yang dimaksud dengan pasar oligopoli dalam teori ekonomi?",
-                    "A. Pasar yang dikuasai oleh satu produsen",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
-                    "C. Pasar yang dikuasai oleh banyak produsen kecil",
-                    "D. Pasar yang tidak memiliki persaingan",
-                    "B. Pasar yang dikuasai oleh beberapa produsen besar",
+            new Question("2. Apa yang dimaksud dengan Linked List dalam struktur data?",
+                    "A. Sekumpulan data yang tersusun dalam array",
+                    "B. Grafik yang menghubungkan data",
+                    "C. Daftar data yang saling terhubung melalui pointer",
+                    "D. Algoritma untuk mencari data",
+                    "C. Daftar data yang saling terhubung melalui pointer",
                     0),
 
-            new Question("3. Apa yang dimaksud dengan GDP (Gross Domestic Product) dalam ekonomi?",
-                    "A. Total nilai ekspor suatu negara",
-                    "B. Total nilai impor suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
-                    "D. Total pendapatan masyarakat dalam suatu negara",
-                    "C. Total nilai produksi barang dan jasa dalam suatu negara",
+            new Question("3. Apa keuntungan penggunaan struktur data Stack dalam pemrograman?",
+                    "A. Memungkinkan penyimpanan data dalam urutan acak",
+                    "B. Mempermudah pencarian data",
+                    "C. Memungkinkan operasi penambahan dan penghapusan data hanya di satu ujung",
+                    "D. Mengurutkan data secara otomatis",
+                    "C. Memungkinkan operasi penambahan dan penghapusan data hanya di satu ujung",
                     0),
 
-            new Question("4. Apa yang dimaksud dengan defisit anggaran dalam keuangan negara?",
-                    "A. Kelebihan pendapatan pemerintah dari total pengeluaran",
-                    "B. Kekurangan pendapatan pemerintah dari total pengeluaran",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
-                    "D. Kekurangan pengeluaran pemerintah dari total pendapatan",
-                    "C. Kelebihan pengeluaran pemerintah dari total pendapatan",
-                    0),
-
-            new Question("5. Apa yang dimaksud dengan konsep penawaran dan permintaan dalam ekonomi?",
-                    "A. Hubungan antara jumlah uang yang beredar dan tingkat inflasi",
-                    "B. Hubungan antara harga barang dan jumlah uang yang beredar",
-                    "C. Hubungan antara jumlah produksi dan tingkat konsumsi",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                    "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
+            new Question("4. Apa yang dimaksud dengan Binary Search Tree (BST) dalam struktur data?",
+                    "A. Pohon berakar dengan dua anak pada setiap simpul",
+                    "B. Metode pencarian data menggunakan algoritma biner",
+                    "C. Struktur data berbentuk pohon yang memungkinkan penyimpanan data terurut",
+                    "D. Metode pengurutan data dalam array",
+                    "C. Struktur data berbentuk pohon yang memungkinkan penyimpanan data terurut",
                    0),
 
+            new Question("5. Apa yang dimaksud dengan Queue dalam struktur data?",
+                    "A. Antrian data dengan prinsip First-In-First-Out (FIFO)",
+                    "B. Metode pencarian data menggunakan algoritma antrian",
+                    "C. Sekumpulan data yang tersusun secara terurut",
+                    "D. Metode pengurutan data dengan aturan tertentu",
+                    "A. Antrian data dengan prinsip First-In-First-Out (FIFO)",
+                    0),
+
+
     };
-    private boolean quizekonomi;
+
+
+    private boolean quizstrukdat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +99,11 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizekonomi = sharedPreferences.getBoolean("quizekonomi", false);
+        quizstrukdat = sharedPreferences.getBoolean("quizstrukdat", false);
 
-        if (quizekonomi) {
-            Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
-            Toast.makeText(QuizSiswaEkonomi.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizstrukdat) {
+            Intent intent = new Intent(QuizMahasiswaStrukdat.this, MenuMahasiswa.class);
+            Toast.makeText(QuizMahasiswaStrukdat.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +207,12 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("nilaiquizekonomi", score);
-        editor.putBoolean("quizekonomi", true);
+        editor.putInt("nilaiquizstrukdat", score);
+        editor.putBoolean("quizstrukdat", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
+        Intent intent = new Intent(QuizMahasiswaStrukdat.this, MenuMahasiswa.class);
         startActivity(intent);
         finish();
     }

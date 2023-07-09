@@ -88,40 +88,100 @@ public class PilihUjianMahasiswa extends AppCompatActivity {
         buttonstatistika.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihUjianMahasiswa.this,  Warning.class);
-                startActivity(intent);
-                buttonstatistika.setBackgroundColor(Color.BLUE);
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihUjianMahasiswa.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Ujian?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihUjianMahasiswa.this, UjianMahasiswaStatistika.class);
+                                startActivity(intent);
+                                buttonstatistika.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
 
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonaorkom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihUjianMahasiswa.this,  Warning.class);
-                startActivity(intent);
-                buttonaorkom.setBackgroundColor(Color.BLUE);
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihUjianMahasiswa.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Ujian?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihUjianMahasiswa.this, UjianMahasiswaAorkom.class);
+                                startActivity(intent);
+                                buttonaorkom.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
 
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonimk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihUjianMahasiswa.this,  Warning.class);
-                startActivity(intent);
-                buttonimk.setBackgroundColor(Color.BLUE);
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihUjianMahasiswa.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Ujian?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihUjianMahasiswa.this, UjianMahasiswaImk.class);
+                                startActivity(intent);
+                                buttonimk.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
 
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonstrukdat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihUjianMahasiswa.this,  Warning.class);
-                startActivity(intent);
-                buttonstrukdat.setBackgroundColor(Color.BLUE);
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihUjianMahasiswa.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Ujian?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihUjianMahasiswa.this, UjianMahasiswaStrukdat.class);
+                                startActivity(intent);
+                                buttonstrukdat.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
 
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 

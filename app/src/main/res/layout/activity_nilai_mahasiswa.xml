@@ -124,7 +124,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/text_view_total_scorekimia"
+            android:id="@+id/text_view_total_scorestk"
             android:layout_below="@+id/jdl_kimia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -134,7 +134,7 @@
             android:textSize="17sp" />
 
         <TextView
-            android:id="@+id/nilai_kimia"
+            android:id="@+id/nilai_stk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -147,13 +147,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_below="@+id/nilai_kimia"
+            android:layout_below="@+id/nilai_stk"
             android:background="@drawable/minus">
         </ImageView>
 
         <TextView
             android:id="@+id/jdl_bio"
-            android:layout_below="@+id/nilai_kimia"
+            android:layout_below="@+id/nilai_stk"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -165,7 +165,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/text_view_total_scorebio"
+            android:id="@+id/text_view_total_scoreaorkom"
             android:layout_below="@+id/jdl_bio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -175,7 +175,7 @@
             android:textSize="17sp" />
 
         <TextView
-            android:id="@+id/nilai_bio"
+            android:id="@+id/nilai_aorkom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -188,13 +188,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_below="@+id/nilai_bio"
+            android:layout_below="@+id/nilai_aorkom"
             android:background="@drawable/minus">
         </ImageView>
 
         <TextView
             android:id="@+id/jdl_eko"
-            android:layout_below="@+id/nilai_bio"
+            android:layout_below="@+id/nilai_aorkom"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -206,7 +206,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/text_view_total_scoreeko"
+            android:id="@+id/text_view_total_scoreimk"
             android:layout_below="@+id/jdl_eko"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -216,7 +216,7 @@
             android:textSize="17sp" />
 
         <TextView
-            android:id="@+id/nilai_eko"
+            android:id="@+id/nilai_imk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -228,7 +228,7 @@
 
         <TextView
             android:id="@+id/jdl_sjr"
-            android:layout_below="@+id/nilai_eko"
+            android:layout_below="@+id/nilai_imk"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -240,7 +240,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/text_view_total_scoresjr"
+            android:id="@+id/text_view_total_scorestrukdat"
             android:layout_below="@+id/jdl_sjr"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -252,12 +252,12 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_below="@+id/nilai_eko"
+            android:layout_below="@+id/nilai_imk"
             android:background="@drawable/minus">
         </ImageView>
 
         <TextView
-            android:id="@+id/nilai_sjr"
+            android:id="@+id/nilai_strukdat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
@@ -270,13 +270,13 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:layout_below="@+id/nilai_sjr"
+            android:layout_below="@+id/nilai_strukdat"
             android:background="@drawable/minus">
         </ImageView>
 
         <TextView
             android:id="@+id/jdl_pbo"
-            android:layout_below="@+id/nilai_sjr"
+            android:layout_below="@+id/nilai_strukdat"
             android:layout_marginTop="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
