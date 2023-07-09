@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class UjianSiswaSejarah extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,52 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Istilah sejarah yang berasal dari kata dalam bahasa Belanda, yaitu…..",
+                    "A.  Geschichte ",
+                    "B. Geschiedenis ",
+                    "C. Syajarotun ",
+                    "D. Balada ",
+                    "B. Geschiedenis ",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2.Contoh periodesasi peristiwa sejarah indonesia yang tersusun secara kronologis adalah...",
+                    "A. Masa kerajaan Hindu-Budha – masa kerajaan islam – masa pendudukan jepang – masa kemerdekaan",
+                    "B. Masa kerajaan islam – masa kerajaan Hindu-Bhuda – masa kolonial belanda – masa pendudukan jepang",
+                    "C. Masa kerajaan Hindu-Budha – masa kerajaan islam – masa kolonial belanda – masa pendudukan jepang – masa kemerdekaan",
+                    "D. Masa pendudukan jepang – masa kolonial belanda – masa kerajaan islam – masa kerajaan Hindu-Bhuda – masa kemerdakaan",
+                    "C. Masa kerajaan Hindu-Budha – masa kerajaan islam – masa kolonial belanda – masa pendudukan jepang – masa kemerdekaan",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3.Kondisi sosial masyarakat indonesia pada masa pendudukan jepang tahun 1942 sangat memprihatinkan sehingga meninggalkan luka pahit bagi sejarah indonesia. Penerapan konsep sejarah yang tepat untuk merekontruksi kembali kondisi sosial masyarakat indonesia pada masa pendudukan jepang 1942 adalah .....",
+
+                    "A. Sinkronis ",
+                    "B. Sinkronis ",
+                    "C. Kausalitas",
+                    "D. Periodesasi",
+                    "A. Sinkronis ",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4.Pithecanthropus Erectus diperkirakan merupakan makhluk yang bermigrasi dari daratan cina ke indonesia. Hal ini terbukti dengan ......",
+
+                    "A. Alat yang digunakan sama dengan di cina daratan yaitu kapak genggam",
+                    "B. Adanya kesamaan antara kebudayaan pacitan dengan kebudayaan ton kin cina",
+                    "C. Pithecanthropus Erectus dan sinanthropus pekinensis ditemukan pada lapisan yang sama yaitu pleistosen tengah",
+                    "D. Pithecanthropus Erectus sebagain pendukung kebudayaan pacitan",
+                    "C. Pithecanthropus Erectus dan sinanthropus pekinensis ditemukan pada lapisan yang sama yaitu pleistosen tengah",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
-                    0),
+            new Question("5.Salah satu wujud akulturasi budaya pra Hindhu-Budha dengan budaya Hindu-Budha di bidang pemerintahan adalah ....",
+
+                     "A. Terjadinya pemilihan untuk menentukan seseorang menjadi raja",
+                     "B. Kepala suku sebagai pimpinan kelompok",
+                     "C. Lahirnya bentuk kerajaan di Nusantara",
+                     "D. Terjalinnya hubungan diplomatik antara kerajaan di India-Nusantara",
+                     "A. Terjadinya pemilihan untuk menentukan seseorang menjadi raja",
+                     0),
 
     };
-    private boolean quizpboCompleted;
+
+    private boolean ujiansejarah;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +100,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        ujiansejarah = sharedPreferences.getBoolean("ujiansejarah", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (ujiansejarah) {
+            Intent intent = new Intent(UjianSiswaSejarah.this, Menu.class);
+            Toast.makeText(UjianSiswaSejarah.this, "Anda Telah Melakukan Ujian", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +208,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiujiansejarah", score);
+        editor.putBoolean("ujiansejarah", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(UjianSiswaSejarah.this, Menu.class);
         startActivity(intent);
         finish();
     }

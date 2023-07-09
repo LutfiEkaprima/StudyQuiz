@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class QuizSiswaPjok extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,48 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Apa yang dimaksud dengan istilah VO2 max dalam olahraga?",
+                    "A. Kapasitas paru-paru",
+                    "B. Jumlah detak jantung per menit",
+                    "C. Volume oksigen maksimum yang dapat dikonsumsi oleh tubuh saat aktivitas fisik",
+                    "D. Jumlah kalori yang terbakar selama latihan",
+                    "C. Volume oksigen maksimum yang dapat dikonsumsi oleh tubuh saat aktivitas fisik",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Olahraga renang termasuk jenis olahraga...",
+                    "A. Aerobik",
+                    "B. Anaerobik",
+                    "C. Koordinasi",
+                    "D. Fleksibilitas",
+                    "A. Aerobik",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Apa yang dimaksud dengan istilah \"repetisi\" dalam latihan beban?",
+                    "A. Jumlah set yang dilakukan dalam satu latihan",
+                    "B. Jumlah gerakan yang dilakukan dalam satu set",
+                    "C. Jumlah detak jantung per menit selama latihan",
+                    "D. Jumlah waktu istirahat antara set",
+                    "B. Jumlah gerakan yang dilakukan dalam satu set",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4. Apa yang dimaksud dengan istilah \"lunge\" dalam senam lantai?",
+                    "A. Loncat jauh",
+                    "B. Loncat tiga kali",
+                    "C. Jongkok dengan satu kaki maju",
+                    "D. Berdiri dengan dua kaki rapat",
+                    "C. Jongkok dengan satu kaki maju",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
+            new Question("5. Pada olahraga bulu tangkis, poin maksimal yang bisa dicapai dalam satu set adalah...",
+                    "A. 15",
+                    "B. 21",
+                    "C. 25",
+                    "D. 30",
+                    "B. 21",
                     0),
 
     };
-    private boolean quizpboCompleted;
+    private boolean quizpjok;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +96,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        quizpjok = sharedPreferences.getBoolean("quizpjok", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizpjok) {
+            Intent intent = new Intent(QuizSiswaPjok.this, Menu.class);
+            Toast.makeText(QuizSiswaPjok.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +204,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiquizpjok", score);
+        editor.putBoolean("quizpjok", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizSiswaPjok.this, Menu.class);
         startActivity(intent);
         finish();
     }

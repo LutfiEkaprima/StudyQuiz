@@ -17,8 +17,8 @@ public class NilaiMahasiswa extends AppCompatActivity {
         TextView nilaiujianmtk = findViewById(R.id.nilai_mtk);
         TextView nilaiquizmtkdisk = findViewById(R.id.text_view_total_scoredisk);
         TextView nilaiujianmtkdisk = findViewById(R.id.nilai_mtkdisk);
-        TextView nilaiujianpbo = findViewById(R.id.text_view_total_scorepbo);
-        TextView nilaiquizpbo = findViewById(R.id.nilai_pbo);
+        TextView nilaiquizpbo = findViewById(R.id.text_view_total_scorepbo);
+        TextView nilaiujianpbo = findViewById(R.id.nilai_pbo);
 
         int quizmtk = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("quizmtk", 0);
         int ujianmtk = getSharedPreferences("MyPrefs", MODE_PRIVATE).getInt("ujianmtk", 0);

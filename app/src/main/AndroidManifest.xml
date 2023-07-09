@@ -12,6 +12,66 @@
         android:theme="@style/Theme.StudyQuizz"
         tools:targetApi="31">
         <activity
+            android:name=".UjianSiswaPkn"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaPjok"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaAgama"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaSbk"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaBing"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaSejarah"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaEkonomi"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaBiologi"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaFisika"
+            android:exported="false" />
+        <activity
+            android:name=".UjianSiswaMtk"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaEkonomi"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaPkn"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaMTK"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaBiologi"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaBindo"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaSbk"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaPjok"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaKimia"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaBing"
+            android:exported="false" />
+        <activity
+            android:name=".QuizSiswaAgama"
+            android:exported="false" />
+        <activity
             android:name=".QuizPbo"
             android:exported="false" />
         <activity

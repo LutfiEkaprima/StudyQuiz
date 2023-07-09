@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class UjianSiswaEkonomi extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,50 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Pada musim penghujan yang menimbulkan banjir, akan mendorong harga beras mengalami kenaikan , dan diikuti kenaikan harga barang kebutuhan pokok. Keadaan ini yang langsung terkena imbasnya adalah pengusaha makanan/restoran.\n\nDampak negatif dari kelangkaan barang kebutuhan pokok tersebut adalah ..... ",
+                    "A. pengusaha menaikkan harga jual dari makanan tersebut",
+                    "B. mengurangi porsi makanan yang dijual dengan harga tetap",
+                    "C. beralih profesi menjadi pengusaha selain makanan/restoran ",
+                    "D. omzet penjualan berkurang sehingga keuntungan berkurang",
+                    "D. omzet penjualan berkurang sehingga keuntungan berkurang",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2.Pak Herman seorang pengusaha sebelum memulai proses produksi suatu barang, harus cermat menentukan target pasar yang akan dituju, seperti anak-anak, remaja, ataukah dewasa.\n\nMasalah pokok ekonomi modern yang terjawab dari pernyataan di atas adalah",
+                    "A. barang apa yang akan diproduksi",
+                    "B. bagaimana cara memproduksi",
+                    "C. untuk siapa barang diproduksi",
+                    "D. berapa banyak barang yang akan diproduksi",
+                    "C. untuk siapa barang diproduksi",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3.Kegiatan yang dilakukan oleh masyarakat sebagai berikut:\n\n(1) Bu Susan setiap hari belanja untuk keperluan sehari-hari\n\n(2) Pak Santoso membeli pulsa untuk dijual lagi\n\n(3) Pak Jamal membayar sewa kios tempatnya usahanya\n\n(4) Pak Jamin membeli bensin motornya untuk pergi ke undangan\n\n(5) Pak Slamet membeli mie untuk bahan baku kios basonya\n\nDari pernyataan di atas yang termasuk perilaku produsen adalah .....",
+                    "A. (1), (2), dan (3)",
+                    "B. (1), (3), dan (5)",
+                    "C. (2), (3), dan (5)",
+                    "D. (3), (4), dan (5)",
+                    "C. (2), (3), dan (5)",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4.Kelangkaan sumber daya alam contohnya minyak bumi bisa diatasi melalui ...",
+
+                    "A. memperbanyak jumlah produksi minyak yang ada di seluruh dunia",
+                    "B. mencari sumber daya atau energi alternatif",
+                    "C. penjualan kendaraan bermotor dihentikan",
+                    "D. menghambat laju pertumbuhan penduduk",
+                    "B. mencari sumber daya atau energi alternatif",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
-                    0),
+            new Question("5.Salah satu masalah pemerintah di bidang ekonomi adalah harga bahan makanan/pokok yang terus naik. Keadaan ini sangat dirasakan oleh masyarakat terutama yang berpenghasilan rendah.\n\nUntuk mengatasi masalah tersebut, upaya yang paling tepat dilakukan pemerintah adalah .....",
+
+                     "A. Menstabilkan harga barang kebutuhan pokok dengan kebijakan harga dan produksi", "B. Mengkampanyekan program hemat belanja dan mencintai produk dalam negeri",
+                     "C. Memberikan subsidi kepada produsen yang mampu memeroduksi kebutuhan masyarakat",
+                     "D. Melalui BUMN turut berpartisipasi memproduksi kebutuhan pokok masyarakat",
+                     "A. Menstabilkan harga barang kebutuhan pokok dengan kebijakan harga dan produksi",
+                     0),
 
     };
-    private boolean quizpboCompleted;
+
+    private boolean ujianekonomi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +98,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        ujianekonomi = sharedPreferences.getBoolean("ujianekonomi", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (ujianekonomi) {
+            Intent intent = new Intent(UjianSiswaEkonomi.this, Menu.class);
+            Toast.makeText(UjianSiswaEkonomi.this, "Anda Telah Melakukan Ujian", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +206,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiujianekonomi", score);
+        editor.putBoolean("ujianekonomi", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(UjianSiswaEkonomi.this, Menu.class);
         startActivity(intent);
         finish();
     }

@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class QuizSiswaKimia extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,48 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Unsur kimia dengan simbol H merupakan simbol dari unsur...",
+                    "A. Hidrogen",
+                    "B. Helium",
+                    "C. Hafnium",
+                    "D. Holmium",
+                    "A. Hidrogen",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Apa yang dimaksud dengan reaksi redoks?",
+                    "A. Reaksi antara asam dan basa",
+                    "B. Reaksi antara oksidator dan reduktor",
+                    "C. Reaksi antara logam dan non-logam",
+                    "D. Reaksi antara alkali dan asam",
+                    "B. Reaksi antara oksidator dan reduktor",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Apa yang dimaksud dengan pH?",
+                    "A. Konsentrasi Hidrogen",
+                    "B. Konsentrasi Oksigen",
+                    "C. Konsentrasi Nitrogen",
+                    "D. Konsentrasi Hidroksil",
+                    "A. Konsentrasi Hidrogen",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4. Reaksi pembakaran adalah contoh dari reaksi...",
+                    "A. Oksidasi",
+                    "B. Reduksi",
+                    "C. Hidrolisis",
+                    "D. Polimerisasi",
+                    "A. Oksidasi",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
+            new Question("5. Unsur kimia dengan nomor atom 13 adalah...",
+                    "A. Karbon",
+                    "B. Oksigen",
+                    "C. Aluminium",
+                    "D. Kalsium",
+                    "C. Aluminium",
                     0),
 
     };
-    private boolean quizpboCompleted;
+    private boolean quizkimia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +96,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        quizkimia = sharedPreferences.getBoolean("quizkimia", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizkimia) {
+            Intent intent = new Intent(QuizSiswaKimia.this, Menu.class);
+            Toast.makeText(QuizSiswaKimia.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +204,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiquizkimia", score);
+        editor.putBoolean("quizkimia", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizSiswaKimia.this, Menu.class);
         startActivity(intent);
         finish();
     }

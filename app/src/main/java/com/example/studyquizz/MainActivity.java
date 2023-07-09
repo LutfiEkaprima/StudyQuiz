@@ -58,6 +58,26 @@ public class MainActivity extends AppCompatActivity {
                         editor.remove("quizsejarahCompleted");
                         editor.remove("ujianindoCompleted");
                         editor.remove("questionAnswered");
+                        editor.remove("quizagama");
+                        editor.remove("quizabindo");
+                        editor.remove("quizabing");
+                        editor.remove("quizbiologi");
+                        editor.remove("quizkimia");
+                        editor.remove("quizmtk");
+                        editor.remove("quizpjok");
+                        editor.remove("quizsbk");
+                        editor.remove("quizpkn");
+                        editor.remove("quizekonomi");
+                        editor.remove("ujianagama");
+                        editor.remove("ujianbing");
+                        editor.remove("ujianbiologi");
+                        editor.remove("ujianekonomi");
+                        editor.remove("ujianfisika");
+                        editor.remove("ujianmtk");
+                        editor.remove("ujianpjok");
+                        editor.remove("ujianpkn");
+                        editor.remove("ujiansbk");
+                        editor.remove("ujiansejarah");
                         editor.apply();
 
                         Intent intent = new Intent(MainActivity.this, Menu.class);
@@ -96,6 +116,26 @@ public class MainActivity extends AppCompatActivity {
         editor.remove("ujiandiskrit");
         editor.remove("quizpbo");
         editor.remove("ujianpbo");
+        editor.remove("nilaiquizagama");
+        editor.remove("nilaiquizabindo");
+        editor.remove("nilaiquizabing");
+        editor.remove("nilaiquizbiologi");
+        editor.remove("nilaiquizkimia");
+        editor.remove("nilaiquizmtk");
+        editor.remove("nilaiquizpjok");
+        editor.remove("nilaiquizsbk");
+        editor.remove("nilaiquizpkn");
+        editor.remove("nilaiquizekonomi");
+        editor.remove("nilaiujianagama");
+        editor.remove("nilaiujianbing");
+        editor.remove("nilaiujianbiologi");
+        editor.remove("nilaiujianekonomi");
+        editor.remove("nilaiujianfisika");
+        editor.remove("nilaiujianmtk");
+        editor.remove("nilaiujianpjok");
+        editor.remove("nilaiujianpkn");
+        editor.remove("nilaiujiansbk");
+        editor.remove("nilaiujiansejarah");
         editor.apply();
     }
 

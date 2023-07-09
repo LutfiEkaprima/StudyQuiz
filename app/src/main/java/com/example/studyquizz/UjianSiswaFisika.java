@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class UjianSiswaFisika extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -36,49 +36,49 @@ public class QuizPbo extends AppCompatActivity {
     private long timeLeftInMillis = 900000; //
 
     Question[] questions = {
-
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Apa yang dimaksud dengan gaya dalam fisika?",
+                    "A. Percepatan suatu benda",
+                    "B. Massa suatu benda",
+                    "C. Pengaruh yang dapat menyebabkan perubahan pada gerak atau bentuk suatu benda",
+                    "D. Kecepatan suatu benda",
+                    "C. Pengaruh yang dapat menyebabkan perubahan pada gerak atau bentuk suatu benda",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Apa yang dimaksud dengan hukum Newton pertama?",
+                    "A. Hukum kekekalan energi",
+                    "B. Hukum kekekalan momentum",
+                    "C. Hukum inersia",
+                    "D. Hukum aksi-reaksi",
+                    "D. Hukum aksi-reaksi",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Apa yang dimaksud dengan momen inersia?",
+                    "A. Kekuatan yang bekerja pada suatu benda",
+                    "B. Perubahan kecepatan suatu benda dalam satuan waktu tertentu",
+                    "C. Resistensi suatu benda terhadap perubahan rotasi",
+                    "D. Jumlah gaya yang bekerja pada suatu benda",
+                    "C. Resistensi suatu benda terhadap perubahan rotasi",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4. Apa yang dimaksud dengan teori relativitas Einstein?",
+                    "A. Teori yang menjelaskan tentang gravitasi",
+                    "B. Teori yang menjelaskan tentang gerak planet",
+                    "C. Teori yang menjelaskan tentang partikel subatom",
+                    "D. Teori yang menjelaskan tentang hubungan antara ruang, waktu, dan gravitasi",
+                    "D. Teori yang menjelaskan tentang hubungan antara ruang, waktu, dan gravitasi",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
-                    0),
+            new Question("5. Apa yang dimaksud dengan energi kinetik?",
+                    "A. Energi yang dimiliki oleh benda karena berada pada posisi tertentu",
+                    "B. Energi yang dimiliki oleh benda karena berputar mengelilingi sumbu",
+                    "C. Energi yang dimiliki oleh benda karena bergerak",
+                    "D. Energi yang dimiliki oleh benda karena bergetar",
+                    "C. Energi yang dimiliki oleh benda karena bergerak",
+                    0)
 
     };
-    private boolean quizpboCompleted;
+
+    private boolean ujianfisika;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +96,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        ujianfisika = sharedPreferences.getBoolean("ujianfisika", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (ujianfisika) {
+            Intent intent = new Intent(UjianSiswaFisika.this, Menu.class);
+            Toast.makeText(UjianSiswaFisika.this, "Anda Telah Melakukan Ujian", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +204,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiujianfisika", score);
+        editor.putBoolean("ujianfisika", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(UjianSiswaFisika.this, Menu.class);
         startActivity(intent);
         finish();
     }

@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class UjianSiswaAgama extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,49 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Siapakah Rasul yang diutus oleh Allah sebagai penutup para Nabi?",
+                    "A. Nabi Ibrahim",
+                    "B. Nabi Musa",
+                    "C. Nabi Isa",
+                    "D. Nabi Muhammad",
+                    "D. Nabi Muhammad",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Apa yang menjadi rukun Islam kelima yang wajib dilaksanakan oleh umat Muslim?",
+                    "A. Shahada",
+                    "B. Salah",
+                    "C. Zakat",
+                    "D. Hajj",
+                    "C. Zakat",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Apa nama ibadah puasa yang dilakukan umat Muslim selama bulan Ramadan?",
+                    "A. Sawm",
+                    "B. Shahada",
+                    "C. Salat",
+                    "D. Zakat",
+                    "A. Sawm",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4. Apa nama kitab suci umat Muslim yang diwahyukan kepada Nabi Muhammad?",
+                    "A. Al-Quran",
+                    "B. Injil",
+                    "C. Taurat",
+                    "D. Zabur",
+                    "A. Al-Quran",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
-                    0),
+            new Question("5. Apa yang menjadi tugas umat Muslim yang mampu secara finansial?",
+                    "A. Zakat",
+                    "B. Salat",
+                    "C. Hajj",
+                    "D. Sawm",
+                    "A. Zakat",
+                    0)
 
     };
-    private boolean quizpboCompleted;
+
+    private boolean ujianagama;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +97,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        ujianagama = sharedPreferences.getBoolean("ujianagama", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (ujianagama) {
+            Intent intent = new Intent(UjianSiswaAgama.this, Menu.class);
+            Toast.makeText(UjianSiswaAgama.this, "Anda Telah Melakukan Ujian", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +205,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiujianagama", score);
+        editor.putBoolean("ujianagama", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(UjianSiswaAgama.this, Menu.class);
         startActivity(intent);
         finish();
     }

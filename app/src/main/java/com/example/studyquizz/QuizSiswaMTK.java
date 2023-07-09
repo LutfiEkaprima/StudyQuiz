@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class QuizSiswaMTK extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,51 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Panitia lomba olimpiade matematika membuat nomor peserta yang disusun dari angka 1, 3, 3, 4, dan 7. Jika nomor-nomor tersebut disusun berdasarkan kodenya mulai dari yang terkecil sampai dengan yang terbesar, nomor peserta 43137 berada pada urutan ke- ...",
+                    "A. 40",
+                    "B. 42",
+                    "C. 44 ",
+                    "D. 85 ",
+                    "A. 40",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Persamaan garis singgung kurva y = x² + 4x − 3 yang tegak lurus dengan garis x + 2y − 10 = 0 adalah ...",
+                    "A. 2x - y + 4",
+                    "B. 2x - y - 4",
+                    "C. 2x - y + 2",
+                    "D. 2x - y - 2",
+                    "B. 2x - y - 4",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Sebuah segitiga siku-siku, sisi alasnya 8 cm , sisi miringnya 17 cm , maka tingginya = .....",
+
+                    "A. 10cm ",
+                    "B. 15cm ",
+                    "C. 18cm ",
+                    "D. 12cm ",
+                    "B. 15cm ",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
-                    0),
+            new Question("4. Untuk Trigonometri di Kuadran I, nlai sin 30° setara dengan nilai ....",
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
-                    0),
+                     "A. Cos 60° ",
+                     "B. Sin 60° ",
+                     "C. Tan 60° ",
+                     "D. Cosec 60° ",
+                     "A. Cos 60° ",
+                     0),
+
+            new Question("5. Nilai sudut istimewa di Kuadran I untuk tan 45° adalah ...",
+
+                     "A. √3",
+                     "B.  √2",
+                     "C. √3/3",
+                     "D. 1",
+                     "1",
+                     0),
 
     };
-    private boolean quizpboCompleted;
+    private boolean quizmtk;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +99,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        quizmtk = sharedPreferences.getBoolean("quizmtk", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizmtk) {
+            Intent intent = new Intent(QuizSiswaMTK.this, Menu.class);
+            Toast.makeText(QuizSiswaMTK.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +207,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiquizmtk", score);
+        editor.putBoolean("quizmtk", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizSiswaMTK.this, Menu.class);
         startActivity(intent);
         finish();
     }

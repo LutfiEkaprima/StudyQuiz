@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class QuizSiswaEkonomi extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,48 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Berikut ini adalah struktur organ pada tumbuhan. Manakah yang merupakan struktur reproduksi pada tumbuhan?",
+                    "A. Daun",
+                    "B. Batang",
+                    "C. Akar ",
+                    "D. Bunga",
+                    "D. Bunga",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Proses pemasukan oksigen ke dalam tubuh hewan disebut...",
+                    "A. Respirasi",
+                    "B. Fotosintesis",
+                    "C. Digesti",
+                    "D. Ekskresi",
+                    "A. Respirasi",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Berikut ini adalah contoh organ pada sistem ekskresi manusia, kecuali...",
+                    "A. Ginjal",
+                    "B. Hati",
+                    "C. Paru-paru",
+                    "D. Kulit",
+                    "B. Hati",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4. Pada proses fotosintesis, tumbuhan menggunakan energi dari matahari untuk...",
+                    "A. Menghasilkan air",
+                    "B. Menghasilkan karbon dioksida",
+                    "C. Menghasilkan oksigen",
+                    "D. Menghasilkan glukosa",
+                    "D. Menghasilkan glukosa",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
+            new Question("5. Proses pembelahan sel yang menghasilkan sel-sel anak identik disebut...",
+                    "A. Mitosis",
+                    "B. Meiosis",
+                    "C. Fertilisasi",
+                    "D. Reproduksi seksual",
+                    "A. Mitosis",
                     0),
 
     };
-    private boolean quizpboCompleted;
+    private boolean quizekonomi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +96,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        quizekonomi = sharedPreferences.getBoolean("quizekonomi", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizekonomi) {
+            Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
+            Toast.makeText(QuizSiswaEkonomi.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +204,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiquizekonomi", score);
+        editor.putBoolean("quizekonomi", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
         startActivity(intent);
         finish();
     }

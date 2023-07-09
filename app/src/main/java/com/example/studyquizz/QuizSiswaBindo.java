@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class QuizSiswaBindo extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,48 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Bacalah paragraf berikut ini!\n\n“Di tengah hiruk-pikuk ibukota yang padat penduduk, banyak orang yang merindukan suasana pedesaan yang sejuk dan tenang. Mereka ingin melarikan diri dari kebisingan dan polusi udara yang kian tak terelakkan.”\n\nKalimat tersebut termasuk jenis teks...",
+                    "A. Deskripsi",
+                    "B. Eksposisi",
+                    "C. Narasi",
+                    "D. Argumentasi",
+                    "A. Deskripsi",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Perhatikan kalimat berikut!\n\n“Dalam rapat tersebut, kami mencapai mufakat untuk melanjutkan program pemberdayaan masyarakat di daerah terpencil.”\n\nPada kalimat di atas, kata “mufakat” memiliki makna...",
+                    "A. Kesepakatan",
+                    "B. Pemahaman",
+                    "C. Keinginan",
+                    "D. Kekacauan",
+                    "A. Kesepakatan",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Perhatikan paragraf berikut!\n\n“Sarana transportasi umum yang masih kurang memadai di kota ini menjadi permasalahan serius. Jumlah penumpang yang tinggi dan keterbatasan armada membuat banyak orang kesulitan dalam beraktivitas sehari-hari.”\n\nPernyataan tersebut termasuk jenis paragraf...",
+                    "A. Eksposisi",
+                    "B. Argumentasi",
+                    "C. Narasi",
+                    "D. Deskripsi",
+                    "A. Eksposisi",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4. Bacalah kalimat berikut!\n\n“Tolong, jangan tinggalkan saya di sini sendirian!”\n\nKalimat tersebut termasuk jenis kalimat...",
+                    "A. Imperatif",
+                    "B. Interogatif",
+                    "C. Deklaratif",
+                    "D. Eksklamatif",
+                    "D. Eksklamatif",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
+            new Question("5. Bacalah cerpen pendek berikut!\n\n“Pada suatu hari yang cerah, Lisa pergi ke taman bersama teman-temannya. Mereka bermain bola dan makan bersama di bawah pohon rindang. Saat matahari mulai terbenam, mereka pulang ke rumah dengan senyum di wajah masing-masing.”\n\nTeks di atas termasuk jenis teks...",
+                    "A. Narasi",
+                    "B. Deskripsi",
+                    "C. Eksposisi",
+                    "D. Argumentasi",
+                    "A. Narasi",
                     0),
 
     };
-    private boolean quizpboCompleted;
+    private boolean quizbindo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +96,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        quizbindo = sharedPreferences.getBoolean("quizbindo", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizbindo) {
+            Intent intent = new Intent(QuizSiswaBindo.this, Menu.class);
+            Toast.makeText(QuizSiswaBindo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +204,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiquizbindo", score);
+        editor.putBoolean("quizbindo", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizSiswaBindo.this, Menu.class);
         startActivity(intent);
         finish();
     }

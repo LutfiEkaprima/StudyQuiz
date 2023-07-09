@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class UjianSiswaBiologi extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,52 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Contoh keanekaragaman tingkat gen adalah ....",
+                    "A. mangga gadung, mangga manalagi, dan mangga muda",
+                    "B. kudu dan keledai",
+                    "C. kucing dan harimau ",
+                    "D. kelapa dan pinang ",
+                    "A. mangga gadung, mangga manalagi, dan mangga muda",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Faktor yang menyebabkan Indonesia memiliki keanekaragaman hayati sangat tinggi adalah .... ",
+                    "A. terletak di antara dua benua",
+                    "B. memiliki iklim tropis dan curah hujan yang cukup tinggi",
+                    "C. memiliki kesamaan floran dan fauna dengan Oriental dan Australia",
+                    "D. sebgai migrasi hewan-hewan dunia",
+                    "B. memiliki iklim tropis dan curah hujan yang cukup tinggi",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Hewan Indonesaia yang memiliki kekerabatan dengan daerah Oriental dan Australia adalah",
+
+                    "A. barat (badak) dan timur (Anoa) ",
+                    "B. barat (orang utan) dan timur (burung cenderawasih)",
+                    "C. barat (gajah) dan timur (marsupilia) ",
+                    "D. barat (elang) dan timur (burung kakaktua) ",
+                    "B. barat (orang utan) dan timur (burung cenderawasih)",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4. Di antara ekosistem berikut yang mempunyai tingkat keanekaragaman paling tinggi adalah ....",
+
+                    "A. hutan bakau",
+                    "B. sawah ",
+                    "C. savana",
+                    "D. hutan hujan tropis ",
+                    "D. hutan hujan tropis ",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
+            new Question("5. Hutan bakau tersusun atas spesies-spesies tumbuhan dengan kondisi habitatnya. Salah satu bentuk adaptasi tumbuhan bakau adalah dengan memiliki ....",
+
+                    "A. daun lebar",
+                    "B. akar serabut ",
+                    "C. akar napas",
+                    "D. batang berongga",
+                    "C. akar napas",
                     0),
 
     };
-    private boolean quizpboCompleted;
+
+    private boolean ujianbiologi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +100,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        ujianbiologi = sharedPreferences.getBoolean("ujianbiologi", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (ujianbiologi) {
+            Intent intent = new Intent(UjianSiswaBiologi.this, Menu.class);
+            Toast.makeText(UjianSiswaBiologi.this, "Anda Telah Melakukan Ujian", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +208,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiujianbiologi", score);
+        editor.putBoolean("ujianbiologi", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(UjianSiswaBiologi.this, Menu.class);
         startActivity(intent);
         finish();
     }

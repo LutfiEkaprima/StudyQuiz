@@ -17,7 +17,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class QuizPbo extends AppCompatActivity {
+public class QuizSiswaBing extends AppCompatActivity {
 
     private TextView textViewQuestion;
     private RadioGroup radioGroupOptions;
@@ -37,48 +37,48 @@ public class QuizPbo extends AppCompatActivity {
 
     Question[] questions = {
 
-            new Question("1. Kumpulan dari method-method yang belum terdapat operasi di dalam tubuh method tersebut disebut ...",
-                    "A. Abstract class",
-                    "B. Inheritance",
-                    "C. Interface ",
-                    "D. Method abstract ",
-                    "C. Interface ",
+            new Question("1. Choose the correct form of the verb to complete the sentence:\n\nMy sister ____ to Japan last year.",
+                    "A. has traveled",
+                    "B. traveled",
+                    "C. will travel",
+                    "D. is traveling",
+                    "B. traveled",
                     0),
 
-            new Question("2. Nama lain dari istilah pewarisan adalah ... ",
-                    "A. Inheritance",
-                    "B. Class",
-                    "C. Multiple interface ",
-                    "D. Implementasi",
-                    "A. Inheritance",
+            new Question("2. Which sentence is grammatically correct?",
+                    "A. She don't like chocolate.",
+                    "B. He have been to London last year.",
+                    "C. They is studying for the exam.",
+                    "D. We were playing soccer yesterday.",
+                    "D. We were playing soccer yesterday.",
                     0),
 
-            new Question("3. System.out.println(“Selamat Datang di Fivser”)\n\n;System.out.print(“Selamat Datang di Fivser”);\n\nApa fungsi dari syntax ln diatas?",
-                    "A. Digunakan untuk membuat paragraf ",
-                    "B. Digunakan untuk perkalian",
-                    "C. Digunakan untuk menghitung modulus ",
-                    "D. Digunakan untuk mengcompile project ",
-                    "A. Digunakan untuk membuat paragraf ",
+            new Question("3. Choose the correct word order for the sentence:\n\nYesterday, my friends and I went to the park.",
+                    "A. My friends and I went to the park yesterday.",
+                    "B. The park went to my friends and I yesterday.",
+                    "C. Went to the park my friends and I yesterday.",
+                    "D. Yesterday went to the park my friends and I.",
+                    "A. My friends and I went to the park yesterday.",
                     0),
 
-            new Question("4. Untuk menyimpan data nim siswa, tipe data yang paling tepat digunakan adalah... ",
-                    "A. Int",
-                    "B. String ",
-                    "C. Bool",
-                    "D. Float ",
-                    "A. Int",
+            new Question("4. Which sentence is an example of a comparative adjective?",
+                    "A. She is tall.",
+                    "B. He is happy.",
+                    "C. This book is interesting.",
+                    "D. The blue shirt is cheaper than the red one.",
+                    "D. The blue shirt is cheaper than the red one.",
                     0),
 
-            new Question("5. Berikut ini yang termasuk tipe data reference adalah… ",
-                    "A. float",
-                    "B. Int ",
-                    "C. String",
-                    "D. Character",
-                    "D. Character",
+            new Question("5. Choose the correct form of the verb to complete the sentence:\n\nI ____ my homework before going to bed.",
+                    "A. did",
+                    "B. have done",
+                    "C. am doing",
+                    "D. will do",
+                    "A. did",
                     0),
 
     };
-    private boolean quizpboCompleted;
+    private boolean quizbing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,11 +96,11 @@ public class QuizPbo extends AppCompatActivity {
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
-        quizpboCompleted = sharedPreferences.getBoolean("quizpboCompleted", false);
+        quizbing = sharedPreferences.getBoolean("quizbing", false);
 
-        if (quizpboCompleted) {
-            Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
-            Toast.makeText(QuizPbo.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
+        if (quizbing) {
+            Intent intent = new Intent(QuizSiswaBing.this, Menu.class);
+            Toast.makeText(QuizSiswaBing.this, "Anda Telah Melakukan Quiz", Toast.LENGTH_SHORT).show();
             startActivity(intent);
             finish();
         }
@@ -204,12 +204,12 @@ public class QuizPbo extends AppCompatActivity {
 
         SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("quizpbo", score);
-        editor.putBoolean("quizpboCompleted", true);
+        editor.putInt("nilaiquizbing", score);
+        editor.putBoolean("quizbing", true);
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizSiswaBing.this, Menu.class);
         startActivity(intent);
         finish();
     }

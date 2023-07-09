@@ -50,10 +50,24 @@ public class PilihQuiz extends AppCompatActivity {
         buttonmtk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonmtk.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaMTK.class);
+                                startActivity(intent);
+                                buttonmtk.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
@@ -85,30 +99,72 @@ public class PilihQuiz extends AppCompatActivity {
         buttonkimia.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonkimia.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaKimia.class);
+                                startActivity(intent);
+                                buttonkimia.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonbio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonbio.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaBiologi.class);
+                                startActivity(intent);
+                                buttonbio.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttoneko.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttoneko.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaEkonomi.class);
+                                startActivity(intent);
+                                buttoneko.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
@@ -139,60 +195,144 @@ public class PilihQuiz extends AppCompatActivity {
         buttoning.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttoning.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaBing.class);
+                                startActivity(intent);
+                                buttoning.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonind.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonind.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaBindo.class);
+                                startActivity(intent);
+                                buttonind.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonsbk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonsbk.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaSbk.class);
+                                startActivity(intent);
+                                buttonsbk.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonpai.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonpai.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaAgama.class);
+                                startActivity(intent);
+                                buttonpai.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonpjok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonpjok.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaPjok.class);
+                                startActivity(intent);
+                                buttonpjok.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
         buttonpkn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(PilihQuiz.this,  Warning.class);
-                startActivity(intent);
-                buttonpkn.setBackgroundColor(Color.BLUE);
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(PilihQuiz.this);
+                builder.setTitle("Konfirmasi")
+                        .setMessage("Apakah Anda ingin memulai Quiz?")
+                        .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent intent = new Intent(PilihQuiz.this, QuizSiswaPkn.class);
+                                startActivity(intent);
+                                buttonpkn.setBackgroundColor(Color.BLUE);
+                            }
+                        })
+                        .setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                            }
+                        })
+                        .create()
+                        .show();
             }
         });
 
