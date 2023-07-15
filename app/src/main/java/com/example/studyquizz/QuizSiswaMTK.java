@@ -31,7 +31,6 @@ public class QuizSiswaMTK extends AppCompatActivity {
     private boolean[] questionAnswered;
     private ImageView imageViewQuestion;
 
-
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = 900000; //
 
@@ -64,21 +63,21 @@ public class QuizSiswaMTK extends AppCompatActivity {
 
             new Question("4. Untuk Trigonometri di Kuadran I, nlai sin 30° setara dengan nilai ....",
 
-                     "A. Cos 60° ",
-                     "B. Sin 60° ",
-                     "C. Tan 60° ",
-                     "D. Cosec 60° ",
-                     "A. Cos 60° ",
-                     0),
+                    "A. Cos 60° ",
+                    "B. Sin 60° ",
+                    "C. Tan 60° ",
+                    "D. Cosec 60° ",
+                    "A. Cos 60° ",
+                    0),
 
             new Question("5. Nilai sudut istimewa di Kuadran I untuk tan 45° adalah ...",
 
-                     "A. √3",
-                     "B.  √2",
-                     "C. √3/3",
-                     "D. 1",
-                     "1",
-                     0),
+                    "A. √3",
+                    "B.  √2",
+                    "C. √3/3",
+                    "D. 1",
+                    "1",
+                    0),
 
     };
     private boolean quizmtk;
@@ -211,8 +210,11 @@ public class QuizSiswaMTK extends AppCompatActivity {
         editor.putBoolean("quizmtk", true);
         editor.apply();
 
-
-        Intent intent = new Intent(QuizSiswaMTK.this, Menu.class);
+        Intent intent = new Intent(QuizSiswaMTK.this, LihatJawabanActivity.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

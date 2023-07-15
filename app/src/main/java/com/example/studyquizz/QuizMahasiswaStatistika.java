@@ -31,7 +31,6 @@ public class QuizMahasiswaStatistika extends AppCompatActivity {
     private boolean[] questionAnswered;
     private ImageView imageViewQuestion;
 
-
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = 900000; //
 
@@ -211,7 +210,12 @@ public class QuizMahasiswaStatistika extends AppCompatActivity {
         editor.apply();
 
 
-        Intent intent = new Intent(QuizMahasiswaStatistika.this, MenuMahasiswa.class);
+
+        Intent intent = new Intent(QuizMahasiswaStatistika.this, LihatJawabanActivityMahasiswa.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

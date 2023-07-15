@@ -209,7 +209,11 @@ public class QuizPbo extends AppCompatActivity {
         editor.apply();
 
 
-        Intent intent = new Intent(QuizPbo.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizPbo.this, LihatJawabanActivityMahasiswa.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

@@ -31,7 +31,6 @@ public class QuizSiswaPkn extends AppCompatActivity {
     private boolean[] questionAnswered;
     private ImageView imageViewQuestion;
 
-
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = 900000; //
 
@@ -209,8 +208,11 @@ public class QuizSiswaPkn extends AppCompatActivity {
         editor.putBoolean("quizpkn", true);
         editor.apply();
 
-
-        Intent intent = new Intent(QuizSiswaPkn.this, Menu.class);
+        Intent intent = new Intent(QuizSiswaPkn.this, LihatJawabanActivity.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

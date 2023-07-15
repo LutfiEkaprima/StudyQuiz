@@ -1,10 +1,8 @@
 package com.example.studyquizz;
 
-import androidx.appcompat.app.AppCompatActivity;
+import java.io.Serializable;
 
-import android.os.Bundle;
-
-public class Question {
+public class Question implements Serializable {
     private String question;
     private String[] options;
     private String correctAnswer;
@@ -33,6 +31,3 @@ public class Question {
         return correctAnswer;
     }
 }
-
-
-

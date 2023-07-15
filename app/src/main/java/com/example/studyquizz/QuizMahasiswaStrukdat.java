@@ -67,7 +67,7 @@ public class QuizMahasiswaStrukdat extends AppCompatActivity {
                     "C. Struktur data berbentuk pohon yang memungkinkan penyimpanan data terurut",
                     "D. Metode pengurutan data dalam array",
                     "C. Struktur data berbentuk pohon yang memungkinkan penyimpanan data terurut",
-                   0),
+                    0),
 
             new Question("5. Apa yang dimaksud dengan Queue dalam struktur data?",
                     "A. Antrian data dengan prinsip First-In-First-Out (FIFO)",
@@ -212,7 +212,11 @@ public class QuizMahasiswaStrukdat extends AppCompatActivity {
         editor.apply();
 
 
-        Intent intent = new Intent(QuizMahasiswaStrukdat.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizMahasiswaStrukdat.this, LihatJawabanActivityMahasiswa.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

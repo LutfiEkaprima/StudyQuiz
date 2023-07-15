@@ -31,7 +31,6 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
     private boolean[] questionAnswered;
     private ImageView imageViewQuestion;
 
-
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = 900000; //
 
@@ -75,7 +74,7 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
                     "C. Hubungan antara jumlah produksi dan tingkat konsumsi",
                     "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
                     "D. Hubungan antara jumlah barang yang ditawarkan dan jumlah barang yang diminta",
-                   0),
+                    0),
 
     };
     private boolean quizekonomi;
@@ -208,8 +207,11 @@ public class QuizSiswaEkonomi extends AppCompatActivity {
         editor.putBoolean("quizekonomi", true);
         editor.apply();
 
-
-        Intent intent = new Intent(QuizSiswaEkonomi.this, Menu.class);
+        Intent intent = new Intent(QuizSiswaEkonomi.this, LihatJawabanActivity.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

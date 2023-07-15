@@ -31,7 +31,6 @@ public class QuizMahasiswaAorkom extends AppCompatActivity {
     private boolean[] questionAnswered;
     private ImageView imageViewQuestion;
 
-
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = 900000; //
 
@@ -78,7 +77,6 @@ public class QuizMahasiswaAorkom extends AppCompatActivity {
 
 
     };
-
 
     private boolean quizaorkom;
 
@@ -208,10 +206,15 @@ public class QuizMahasiswaAorkom extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putInt("nilaiquizaorkom", score);
         editor.putBoolean("quizaorkom", true);
-        editor.apply();
+        editor.apply();;
 
 
-        Intent intent = new Intent(QuizMahasiswaAorkom.this, MenuMahasiswa.class);
+
+        Intent intent = new Intent(QuizMahasiswaAorkom.this, LihatJawabanActivityMahasiswa.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

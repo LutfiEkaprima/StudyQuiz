@@ -35,7 +35,7 @@ public class Quiz extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = 900000; //
 
-    Question[] questions = {
+    static Question[] questions = {
             new Question("1. Dua benda dengan massa yang sama dipasang pada ujung-ujung dari sebuah batang seperti pada gambar, Jika batang dalam kondisi setimbang dan poros dapat berputar, maka batang .... jika benda di sisi kanan didekatkan ke arah poros",
                     "A. akan berputar searah jarum jam ",
                     "B. akan berputar berlawanan arah jarum jam",
@@ -207,7 +207,12 @@ public class Quiz extends AppCompatActivity {
         editor.apply();
 
 
-        Intent intent = new Intent(Quiz.this, Menu.class);
+
+        Intent intent = new Intent(Quiz.this, LihatJawabanActivity.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

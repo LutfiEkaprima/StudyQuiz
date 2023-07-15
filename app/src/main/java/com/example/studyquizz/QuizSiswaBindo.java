@@ -31,7 +31,6 @@ public class QuizSiswaBindo extends AppCompatActivity {
     private boolean[] questionAnswered;
     private ImageView imageViewQuestion;
 
-
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = 900000; //
 
@@ -104,6 +103,8 @@ public class QuizSiswaBindo extends AppCompatActivity {
             startActivity(intent);
             finish();
         }
+
+
 
         userAnswers = new int[questions.length];
         questionAnswered = new boolean[questions.length];
@@ -209,7 +210,12 @@ public class QuizSiswaBindo extends AppCompatActivity {
         editor.apply();
 
 
-        Intent intent = new Intent(QuizSiswaBindo.this, Menu.class);
+
+        Intent intent = new Intent(QuizSiswaBindo.this, LihatJawabanActivity.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

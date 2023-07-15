@@ -11,4 +11,7 @@
     <color name="merah">#F44336</color>
     <color name="kuning">#FFEB3B</color>
     <color name="biru">#5377F8</color>
+    <color name="correctAnswerColor">#49F436</color>
+    <color name="textColor1">#000000</color>
+    <color name="textColor2">#FF1100</color>
 </resources>

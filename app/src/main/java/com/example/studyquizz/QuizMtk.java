@@ -80,8 +80,6 @@ public class QuizMtk extends AppCompatActivity {
                     "D. 3x^6",
                     0),
     };
-
-
     private boolean quizmtkCompleted;
 
     @Override
@@ -213,7 +211,11 @@ public class QuizMtk extends AppCompatActivity {
         editor.apply();
 
 
-        Intent intent = new Intent(QuizMtk.this, MenuMahasiswa.class);
+        Intent intent = new Intent(QuizMtk.this, LihatJawabanActivityMahasiswa.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

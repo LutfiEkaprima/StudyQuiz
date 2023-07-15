@@ -31,7 +31,6 @@ public class QuizDiskrit extends AppCompatActivity {
     private boolean[] questionAnswered;
     private ImageView imageViewQuestion;
 
-
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis = 900000; //
 
@@ -210,7 +209,12 @@ public class QuizDiskrit extends AppCompatActivity {
         editor.apply();
 
 
-        Intent intent = new Intent(QuizDiskrit.this, MenuMahasiswa.class);
+
+        Intent intent = new Intent(QuizDiskrit.this, LihatJawabanActivityMahasiswa.class);
+        intent.putExtra("questions", questions);
+        intent.putExtra("userAnswers", userAnswers);
+        intent.putExtra("totalScore", score);
+        intent.putExtra("totalQuestions", questions.length);
         startActivity(intent);
         finish();
     }

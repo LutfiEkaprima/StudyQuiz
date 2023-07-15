@@ -12,6 +12,12 @@
         android:theme="@style/Theme.StudyQuizz"
         tools:targetApi="31">
         <activity
+            android:name=".LihatJawabanActivityMahasiswa"
+            android:exported="false" />
+        <activity
+            android:name=".LihatJawabanActivity"
+            android:exported="false" />
+        <activity
             android:name=".UjianMahasiswaStrukdat"
             android:exported="false" />
         <activity
@@ -157,6 +163,9 @@
             android:exported="false" />
         <activity
             android:name=".Menu"
+            android:exported="false" />
+        <activity
+            android:name=".Dashboard"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
