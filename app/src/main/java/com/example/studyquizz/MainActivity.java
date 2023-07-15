@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
                         editor.remove("ujianindoCompleted");
                         editor.remove("questionAnswered");
                         editor.remove("quizagama");
-                        editor.remove("quizabindo");
-                        editor.remove("quizabing");
+                        editor.remove("quizbindo");
+                        editor.remove("quizbing");
                         editor.remove("quizbiologi");
                         editor.remove("quizkimia");
                         editor.remove("quizmtk");
@@ -125,8 +125,8 @@ public class MainActivity extends AppCompatActivity {
         editor.remove("quizpbo");
         editor.remove("ujianpbo");
         editor.remove("nilaiquizagama");
-        editor.remove("nilaiquizabindo");
-        editor.remove("nilaiquizabing");
+        editor.remove("nilaiquizbindo");
+        editor.remove("nilaiquizbing");
         editor.remove("nilaiquizbiologi");
         editor.remove("nilaiquizkimia");
         editor.remove("nilaiquizmtk");
